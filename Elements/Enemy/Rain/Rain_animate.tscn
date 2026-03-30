@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cd1fr20k2sve7"]
+
+[ext_resource type="AudioStream" uid="uid://btvvranmnt12v" path="res://Assets/Sounds/blop1.mp3" id="12_2tnpl"]
+
+[node name="Rain_sounds" type="Node2D" unique_id=4683396]
+
+[node name="sound" type="AudioStreamPlayer" parent="." unique_id=879295325]
+stream = ExtResource("12_2tnpl")

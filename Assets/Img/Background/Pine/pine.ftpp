@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "version": "0.6.7"
+  },
+  "savePath": "/Volumes/ARH/DEVELOP/GAMES/GODOT/Rain_Boss/RainBoss/Assets/Img/Background/Pine",
+  "images": [
+    {
+      "name": "pine_0001_pine1.png",
+      "path": "/Volumes/ARH/DEVELOP/GAMES/ASSETS/PLANT/Pine_all/pine_0001_pine1.png",
+      "folder": ""
+    },
+    {
+      "name": "pine_0002_pine2.png",
+      "path": "/Volumes/ARH/DEVELOP/GAMES/ASSETS/PLANT/Pine_all/pine_0002_pine2.png",
+      "folder": ""
+    },
+    {
+      "name": "pine_0003_pine3.png",
+      "path": "/Volumes/ARH/DEVELOP/GAMES/ASSETS/PLANT/Pine_all/pine_0003_pine3.png",
+      "folder": ""
+    },
+    {
+      "name": "pine_0004_pine4.png",
+      "path": "/Volumes/ARH/DEVELOP/GAMES/ASSETS/PLANT/Pine_all/pine_0004_pine4.png",
+      "folder": ""
+    },
+    {
+      "name": "pine_0005_pine5.png",
+      "path": "/Volumes/ARH/DEVELOP/GAMES/ASSETS/PLANT/Pine_all/pine_0005_pine5.png",
+      "folder": ""
+    },
+    {
+      "name": "pine_0006_pine6.png",
+      "path": "/Volumes/ARH/DEVELOP/GAMES/ASSETS/PLANT/Pine_all/pine_0006_pine6.png",
+      "folder": ""
+    },
+    {
+      "name": "pine_0007_pine7.png",
+      "path": "/Volumes/ARH/DEVELOP/GAMES/ASSETS/PLANT/Pine_all/pine_0007_pine7.png",
+      "folder": ""
+    }
+  ],
+  "folders": [],
+  "packOptions": {
+    "textureName": "Pine_black",
+    "textureFormat": "png",
+    "removeFileExtension": false,
+    "prependFolderName": false,
+    "base64Export": false,
+    "tinify": false,
+    "tinifyKey": "",
+    "scale": 1,
+    "filter": "none",
+    "exporter": "JSON (hash)",
+    "fileName": "pack-result",
+    "savePath": "/Volumes/ARH/DEVELOP/GAMES/GODOT/Rain_Boss/RainBoss/Assets/Img/Background/Pine",
+    "width": 2048,
+    "height": 2048,
+    "fixedSize": false,
+    "powerOfTwo": false,
+    "padding": 0,
+    "extrude": 0,
+    "allowRotation": false,
+    "allowTrim": true,
+    "trimMode": "trim",
+    "alphaThreshold": "0",
+    "detectIdentical": true,
+    "packer": "OptimalPacker",
+    "packerMethod": "Automatic"
+  }
+}

@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://bkn2iqtmrlonx"]
+
+[ext_resource type="Texture2D" uid="uid://d0ilmskof48g1" path="res://Assets/Img/Rain/Rain_diamond.png" id="1_6otkn"]
+[ext_resource type="Script" uid="uid://p4pgmdor7m80" path="res://Elements/Enemy/Rain/rain_gems.gd" id="1_snmcr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjuia"]
+atlas = ExtResource("1_6otkn")
+region = Rect2(0, 0, 220, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_km27x"]
+atlas = ExtResource("1_6otkn")
+region = Rect2(0, 317, 220, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik7m8"]
+atlas = ExtResource("1_6otkn")
+region = Rect2(220, 0, 220, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xq5w"]
+atlas = ExtResource("1_6otkn")
+region = Rect2(220, 317, 220, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl5yb"]
+atlas = ExtResource("1_6otkn")
+region = Rect2(440, 0, 220, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnme6"]
+atlas = ExtResource("1_6otkn")
+region = Rect2(440, 317, 220, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei0do"]
+atlas = ExtResource("1_6otkn")
+region = Rect2(660, 0, 220, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfrad"]
+atlas = ExtResource("1_6otkn")
+region = Rect2(660, 317, 220, 317)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_snmcr"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_vjuia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_km27x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik7m8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xq5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl5yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnme6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei0do")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfrad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjuia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfrad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei0do")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnme6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl5yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xq5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik7m8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_km27x")
+}],
+"loop": true,
+"name": &"Rain",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bfmrj"]
+radius = 7.071068
+
+[node name="Area2D" type="Area2D" unique_id=118688148]
+collision_layer = 2
+script = ExtResource("1_snmcr")
+
+[node name="Animated_Rain" type="AnimatedSprite2D" parent="." unique_id=2003722576]
+position = Vector2(0, -14)
+scale = Vector2(0.09090908, 0.09090913)
+sprite_frames = SubResource("SpriteFrames_snmcr")
+animation = &"Rain"
+autoplay = "Rain"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=564114499]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_bfmrj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

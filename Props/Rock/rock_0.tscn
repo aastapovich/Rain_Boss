@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c8xpvgh4gppim"]
+
+[ext_resource type="Texture2D" uid="uid://cerf1y5578nev" path="res://Assets/Img/Player/Shaddow.png" id="1_5n0p2"]
+[ext_resource type="Texture2D" uid="uid://dnk8pfxdhro5c" path="res://Assets/Img/Background/Rock/Rock.png" id="2_ggwql"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2whk"]
+atlas = ExtResource("2_ggwql")
+region = Rect2(30.09433, 559.5567, 153.17757, 77.12854)
+
+[node name="Rock_0" type="Node2D" unique_id=1360790534]
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1417814026]
+position = Vector2(-2.8732383, 3)
+scale = Vector2(1.015625, 0.10883293)
+texture = ExtResource("1_5n0p2")
+offset = Vector2(1.3521118, -32.000023)
+
+[node name="Rock1_1" type="Sprite2D" parent="." unique_id=1027297365]
+position = Vector2(0, 5)
+scale = Vector2(0.375, 0.375)
+texture = SubResource("AtlasTexture_y2whk")
+offset = Vector2(3.636444, -50.909058)

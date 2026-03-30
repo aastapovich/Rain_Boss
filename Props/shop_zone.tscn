@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bn43672j5xkjy"]
+
+[ext_resource type="Script" uid="uid://dk7r3q2m5np8j" path="res://Props/shop_zone.gd" id="1_shopz"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shopz"]
+size = Vector2(80, 100)
+
+[node name="ShopZone" type="Area2D" unique_id=1021312425]
+script = ExtResource("1_shopz")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1560024810]
+shape = SubResource("RectangleShape2D_shopz")
+
+[node name="HintLabel" type="Label" parent="." unique_id=1955027803]
+self_modulate = Color(0.8627451, 0.54901963, 0, 1)
+offset_left = -65.0
+offset_top = -132.0
+offset_right = 69.0
+offset_bottom = -87.0
+theme_override_font_sizes/font_size = 30
+text = "↑ Войти"
+horizontal_alignment = 1

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cwr53umh4a2js"]
+
+[ext_resource type="Script" uid="uid://cfep0p0dsk74w" path="res://ui/game_over/game_over.gd" id="1_xgqeb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lisxc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.729412, 0.533333, 0.0862745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7q6wb"]
+bg_color = Color(0.729412, 0.533333, 0.0862745, 1)
+
+[node name="GameOver" type="CanvasLayer" unique_id=76123652]
+process_mode = 2
+script = ExtResource("1_xgqeb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1433747048]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=757589685]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2027440346]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2085864560]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=701769029]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_lisxc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7q6wb")
+text = "RESTART"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

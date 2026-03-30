@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cgyhpays78lp"]
+
+[ext_resource type="Script" uid="uid://ljtdshl16hkv" path="res://Props/interact_zone.gd" id="1_x8my2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x8my2"]
+radius = 23.194826
+
+[node name="interact_zone" type="Area2D" unique_id=962471946]
+script = ExtResource("1_x8my2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2143110147]
+shape = SubResource("CircleShape2D_x8my2")
+
+[node name="HintLabel" type="Label" parent="." unique_id=1208611169]
+self_modulate = Color(0, 0, 1, 1)
+offset_left = -102.0
+offset_top = -209.0
+offset_right = 106.0
+offset_bottom = -164.0
+theme_override_font_sizes/font_size = 22
+text = "↑ Осмотреть"
+horizontal_alignment = 1
+vertical_alignment = 1

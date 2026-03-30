@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://vifkoitde1f0" path="res://Elements/Enemy/enemy_data.gd" id="1_ehdata"]
+
+[resource]
+script = ExtResource("1_ehdata")
+enemy_id = "hedgehog_thief"
+enemy_name = "Ёжик-воришка"
+description = "Хитрый вор. Подходит только при наполненной тачке. Чем больше воды — тем смелее."
+speed = 60.0
+speed_variance = Vector2(0.8, 1.2)
+has_gravity = true
+collision_layer = 2
+collision_mask = 1
+health = 100.0
+is_immortal = true
+damage_type = 0
+damage_player = 0.0
+damage_wheelbarrow = 0.0
+damage_is_percent = false
+damage_interval = 1.0
+can_steal_water = true
+water_steal_amount = 10.0
+water_steal_is_percent = true
+water_steal_interval = 2.0
+flee_if_no_water = true
+ai_type = 4
+aggression = Vector2(0.7, 1.3)
+target_distance = 90.0
+attack_distance = 75.0
+flee_distance = 90.0
+detection_radius = 300.0
+patrol_radius = 100.0
+spawn_trigger = 1
+spawn_delay_min = 60.0
+spawn_delay_max = 240.0
+spawn_probability = 0.5
+spawn_position_offset = Vector2(-350, 0)
+max_instances = 1
+idle_timeout = 5.0
+despawn_on_player_stop = false
+despawn_on_empty_water = true
+despawn_on_home_return = true
+despawn_distance = 500.0
+affected_by_gloves = true
+affected_by_boots = false
+affected_by_cloak = true
+affected_by_wheelbarrow = true
+damage_reduction_per_upgrade = 0.15

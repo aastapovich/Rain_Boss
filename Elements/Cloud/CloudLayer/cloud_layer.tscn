@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bilcoknko5iy8"]
+
+[ext_resource type="Script" uid="uid://dgrnltoah7eju" path="res://Elements/Cloud/CloudLayer/cloud_layer.gd" id="1_cl"]
+
+[node name="CloudLayer" type="Node2D" unique_id=1035941379]
+script = ExtResource("1_cl")

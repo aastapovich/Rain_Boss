@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bmhkiqc2g4m10"]
+
+[ext_resource type="Script" uid="uid://bvrainsplash1" path="res://Elements/Enemy/Rain/rain_splash_effect.gd" id="1_splash"]
+[ext_resource type="Texture2D" uid="uid://npuh82ybwbw3" path="res://Assets/Img/Rain/Rain_swaps/water_splash_0004_Слой-3.png" id="2_t0"]
+[ext_resource type="Texture2D" uid="uid://dsj3u337t4lqb" path="res://Assets/Img/Rain/Rain_swaps/water_splash_0003_Слой-4.png" id="3_t1"]
+[ext_resource type="Texture2D" uid="uid://cc0hr6dnrro5u" path="res://Assets/Img/Rain/Rain_swaps/water_splash_0002_Слой-5.png" id="4_t2"]
+[ext_resource type="Texture2D" uid="uid://d22tvsuont402" path="res://Assets/Img/Rain/Rain_swaps/water_splash_0001_Слой-6.png" id="5_t3"]
+[ext_resource type="Texture2D" uid="uid://2i1sn6dd03st" path="res://Assets/Img/Rain/Rain_swaps/water_splash_0000_Слой-7.png" id="6_t4"]
+[ext_resource type="Texture2D" uid="uid://dck5j7lsn8d6o" path="res://Assets/Img/Rain/Rain_swaps/sprite_water_splash_0000_Слой-15.png" id="7_t5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_splash"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t5")
+}],
+"loop": false,
+"name": &"Rain_splash",
+"speed": 12.0
+}]
+
+[node name="RainSplash" type="AnimatedSprite2D" unique_id=2011087079]
+self_modulate = Color(0.43527886, 0.7208021, 0.92572355, 0.5294118)
+scale = Vector2(0.49855652, 0.27418542)
+sprite_frames = SubResource("SpriteFrames_splash")
+animation = &"Rain_splash"
+frame = 4
+frame_progress = 0.25793448
+offset = Vector2(0, -18.58)
+script = ExtResource("1_splash")

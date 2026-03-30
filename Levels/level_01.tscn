@@ -1,0 +1,240 @@
+[gd_scene format=3 uid="uid://b48imbj65yddn"]
+
+[ext_resource type="PackedScene" uid="uid://brsjofnv05q4e" path="res://Background/background.tscn" id="1_bg"]
+[ext_resource type="PackedScene" uid="uid://gcnrh1t81vqm" path="res://Background/Wall/place.tscn" id="2_place"]
+[ext_resource type="PackedScene" uid="uid://b3m3sfl1h1fgv" path="res://Props/home.tscn" id="4_home"]
+[ext_resource type="PackedScene" uid="uid://bn43672j5xkjy" path="res://Props/shop_zone.tscn" id="5_qq6xg"]
+[ext_resource type="PackedScene" uid="uid://cup5p36o7cljf" path="res://Background/Wall/wall_left.tscn" id="5_wl"]
+[ext_resource type="PackedScene" uid="uid://yellirw3djcw" path="res://Background/Wall/wall_right.tscn" id="6_wr"]
+[ext_resource type="PackedScene" uid="uid://dahgflc73tpq0" path="res://Props/scatter.tscn" id="10_yv3th"]
+[ext_resource type="PackedScene" uid="uid://y6wrfjp0d0wf" path="res://Elements/Cloud/TransformZone/transform_zone.tscn" id="11_tz"]
+[ext_resource type="PackedScene" uid="uid://da2f6gwieqw5i" path="res://Props/GrassScatter.tscn" id="12_m5qaj"]
+[ext_resource type="Resource" uid="uid://b383t8l1bxkso" path="res://Elements/Cloud/CloudConfig/configs/cloud_rain.tres" id="12_rain"]
+[ext_resource type="Resource" uid="uid://bpw2rbh0b70ot" path="res://Elements/Cloud/CloudConfig/configs/cloud_storm.tres" id="13_storm"]
+[ext_resource type="Script" uid="uid://xn7w5wbnwdme" path="res://addons/scatter2d/src/stack/modifier_stack.gd" id="13_ui5nr"]
+[ext_resource type="Script" uid="uid://mvkmr4qqe3h0" path="res://addons/scatter2d/src/modifiers/modifier_base.gd" id="14_kem32"]
+[ext_resource type="Resource" uid="uid://bf5ueghutwj1b" path="res://Elements/Cloud/CloudConfig/configs/cloud_simple.tres" id="14_simple"]
+[ext_resource type="Script" uid="uid://c41lg48ys4sd2" path="res://Elements/Enemy/stop_point.gd" id="15_sp"]
+[ext_resource type="Script" uid="uid://dud2pkt70o4ui" path="res://addons/scatter2d/src/modifiers/mod_create_inside_random.gd" id="15_xrji8"]
+[ext_resource type="Texture2D" uid="uid://bqjf27m2j8wbl" path="res://Assets/Img/enemy/Sign/Sign1.png" id="16_sign"]
+[ext_resource type="PackedScene" uid="uid://6d6dy6oq623w" path="res://Elements/Enemy/StopPointPlayer.tscn" id="17_drain"]
+[ext_resource type="PackedScene" uid="uid://v7kkbdvf07yt" path="res://Elements/Exit_plot/exit_plot.tscn" id="18_exit"]
+[ext_resource type="PackedScene" uid="uid://bilcoknko5iy8" path="res://Elements/Cloud/CloudLayer/cloud_layer.tscn" id="19_cloudlayer"]
+[ext_resource type="PackedScene" uid="uid://cgyhpays78lp" path="res://Props/interact_zone.tscn" id="21_jkbap"]
+[ext_resource type="Script" uid="uid://cauut5m2mih5o" path="res://Levels/level_unload.gd" id="22_unl"]
+[ext_resource type="PackedScene" uid="uid://b5157shtjvbyj" path="res://Elements/wheel.tscn" id="23_yv3th"]
+
+[sub_resource type="Resource" id="Resource_yv3th"]
+script = ExtResource("15_xrji8")
+amount = 30
+reference_frame = 1
+
+[sub_resource type="Resource" id="Resource_m5qaj"]
+script = ExtResource("13_ui5nr")
+stack = Array[ExtResource("14_kem32")]([SubResource("Resource_yv3th")])
+
+[sub_resource type="Resource" id="Resource_ui5nr"]
+script = ExtResource("15_xrji8")
+amount = 30
+reference_frame = 1
+
+[sub_resource type="Resource" id="Resource_kem32"]
+script = ExtResource("13_ui5nr")
+stack = Array[ExtResource("14_kem32")]([SubResource("Resource_ui5nr")])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_082j7"]
+size = Vector2(91.5, 60)
+
+[sub_resource type="Animation" id="Animation_show"]
+resource_name = "Label_show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.49),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(7.6293945e-06, -37.00002), Vector2(-50, -130)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.01, 0.01), Vector2(0.5, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(1, 0.4352752),
+"update": 0,
+"values": [Color(1, 1, 1, 0.16862746), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_reset"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-100, -159)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_malsm"]
+_data = {
+&"Label_show": SubResource("Animation_show"),
+&"RESET": SubResource("Animation_reset")
+}
+
+[node name="Level01Content" type="Node2D" unique_id=1422758880]
+
+[node name="Background" parent="." unique_id=1683030557 instance=ExtResource("1_bg")]
+
+[node name="Place" parent="." unique_id=319281876 instance=ExtResource("2_place")]
+
+[node name="Props" type="Node2D" parent="." unique_id=1634527286]
+
+[node name="Home" parent="Props" unique_id=1068315644 instance=ExtResource("4_home")]
+position = Vector2(421, 636)
+
+[node name="ShopZone" parent="Props" unique_id=1021312425 instance=ExtResource("5_qq6xg")]
+position = Vector2(328, 594)
+
+[node name="Wall" type="Node2D" parent="Props" unique_id=169046020]
+
+[node name="Vall_right" parent="Props/Wall" unique_id=656352069 instance=ExtResource("6_wr")]
+position = Vector2(3784, 0)
+
+[node name="Vall_left" parent="Props/Wall" unique_id=1381700773 instance=ExtResource("5_wl")]
+
+[node name="Scatter_Grass" parent="Props" unique_id=2008980721 instance=ExtResource("10_yv3th")]
+position = Vector2(6, -29)
+modifier_stack = SubResource("Resource_m5qaj")
+
+[node name="Scatter_Rock" parent="Props" unique_id=658576194 instance=ExtResource("12_m5qaj")]
+z_index = 4
+position = Vector2(-97, -36)
+global_seed = 5
+modifier_stack = SubResource("Resource_kem32")
+
+[node name="TransformZone_ToRain" parent="." unique_id=1713508004 instance=ExtResource("11_tz")]
+position = Vector2(441, 97)
+target_config = ExtResource("12_rain")
+min_score = 50
+
+[node name="TransformZone_ToStorm" parent="." unique_id=2082758205 instance=ExtResource("11_tz")]
+position = Vector2(2425, 146)
+target_config = ExtResource("13_storm")
+min_score = 150
+
+[node name="TransformZone_BackToSimple" parent="." unique_id=77558990 instance=ExtResource("11_tz")]
+position = Vector2(3184, 102)
+target_config = ExtResource("14_simple")
+
+[node name="attention" type="Area2D" parent="." unique_id=1558433353]
+position = Vector2(1125, 626)
+script = ExtResource("15_sp")
+
+[node name="SIgn" type="Sprite2D" parent="attention" unique_id=1530833867]
+position = Vector2(0, -11.999999)
+scale = Vector2(0.3928563, 0.31666654)
+texture = ExtResource("16_sign")
+
+[node name="Label" type="Label" parent="attention" unique_id=541470004]
+visible = false
+modulate = Color(0.862745, 0, 0, 1)
+clip_contents = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -159.0
+offset_right = 169.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 42
+text = "\"Осторожно!
+	  Ёжики...\""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attention" unique_id=940171235]
+position = Vector2(3.75, 1)
+shape = SubResource("RectangleShape2D_082j7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="attention" unique_id=213235662]
+libraries/ = SubResource("AnimationLibrary_malsm")
+
+[node name="Unload" type="Node2D" parent="." unique_id=234024626]
+script = ExtResource("22_unl")
+tip_angle = 0.75
+
+[node name="drain" parent="Unload" unique_id=2094378631 instance=ExtResource("17_drain")]
+position = Vector2(1055, 611)
+collision_mask = 1
+
+[node name="Exit_plot" parent="." unique_id=1263592679 instance=ExtResource("18_exit")]
+position = Vector2(3870.0002, 664)
+scale = Vector2(1.155, 1.155)
+
+[node name="CloudLayer" parent="." unique_id=1035941379 instance=ExtResource("19_cloudlayer")]
+
+[node name="interact_zone" parent="." unique_id=450612334 instance=ExtResource("21_jkbap")]
+position = Vector2(1128, 627)
+popup_title = "OOO"
+popup_text = "RFR"
+
+[node name="Wheel" parent="." unique_id=1262444949 instance=ExtResource("23_yv3th")]
+position = Vector2(728, 640)
+
+[connection signal="body_entered" from="attention" to="attention" method="_on_body_entered"]
+[connection signal="body_exited" from="attention" to="attention" method="_on_body_exited"]

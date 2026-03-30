@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bpdkrqqk8xrp2"]
+
+[ext_resource type="Texture2D" uid="uid://bbpgl054qwt3r" path="res://Assets/Img/Background/Grass/grass_short_autumn_02_AM.png" id="1_hvaqj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yv3th"]
+atlas = ExtResource("1_hvaqj")
+region = Rect2(11.926033, 138.5885, 86.818634, 96.83618)
+
+[node name="grass2" type="Sprite2D" unique_id=268654085]
+scale = Vector2(0.6, 0.6)
+texture = SubResource("AtlasTexture_yv3th")

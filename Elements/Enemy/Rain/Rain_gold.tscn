@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://vsyskwteunt2"]
+
+[ext_resource type="Script" uid="uid://cyy2xykpeg5j3" path="res://Elements/Enemy/Rain/rain_gold.gd" id="1_8kh1u"]
+[ext_resource type="Texture2D" uid="uid://bxf8t0i63hb35" path="res://Assets/Img/Rain/RW_monohrom_mid/rain_water_mono_all.png" id="2_xwfvi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4lyu"]
+atlas = ExtResource("2_xwfvi")
+region = Rect2(0, 0, 172, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pycit"]
+atlas = ExtResource("2_xwfvi")
+region = Rect2(172, 0, 172, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvsij"]
+atlas = ExtResource("2_xwfvi")
+region = Rect2(344, 0, 172, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_042hl"]
+atlas = ExtResource("2_xwfvi")
+region = Rect2(0, 315, 172, 315)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn7bg"]
+atlas = ExtResource("2_xwfvi")
+region = Rect2(172, 315, 172, 315)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i3vme"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4lyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pycit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvsij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pycit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4lyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_042hl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tn7bg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4lyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pycit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4lyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_042hl")
+}],
+"loop": true,
+"name": &"Gold",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xwfvi"]
+radius = 7.0
+
+[node name="Rain_gold" type="Area2D" unique_id=1130193942]
+top_level = true
+collision_layer = 2
+script = ExtResource("1_8kh1u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1143377199]
+self_modulate = Color(0.8938901, 0.89389014, 0, 1)
+position = Vector2(0, -16)
+scale = Vector2(0.10465115, 0.10465117)
+sprite_frames = SubResource("SpriteFrames_i3vme")
+animation = &"Gold"
+autoplay = "Gold"
+frame_progress = 0.129449
+
+[node name="CollisionRain" type="CollisionShape2D" parent="." unique_id=1870537388]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_xwfvi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

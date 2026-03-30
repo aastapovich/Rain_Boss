@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CloudConfig" format=3 uid="uid://b383t8l1bxkso"]
+
+[ext_resource type="Script" uid="uid://4a7vr2wyv5sk" path="res://Elements/Cloud/CloudConfig/cloud_config.gd" id="1_cfg"]
+[ext_resource type="Texture2D" uid="uid://isdjmqgjg8le" path="res://Assets/Img/cloud/Cloud_01/Cl1.png" id="2_tex"]
+[ext_resource type="Texture2D" uid="uid://8pc5ogg2h1aa" path="res://Assets/Img/cloud/Cloud_01/Cl2.png" id="3_tex"]
+[ext_resource type="Texture2D" uid="uid://drujy8fdaeuoq" path="res://Assets/Img/cloud/Cloud_01/Cl3.png" id="4_tex"]
+
+[resource]
+script = ExtResource("1_cfg")
+cloud_type = 1
+sprite_textures = Array[Texture2D]([ExtResource("2_tex"), ExtResource("3_tex"), ExtResource("4_tex")])
+scale_x_range = Vector2(1, 1.6)
+scale_y_range = Vector2(1, 1.2)
+speed = 40.0
+y_range = Vector2(50, 110)
+shader_darkness = 0.3
+shader_blue_shift = 0.2
+rain_drops_per_second = 0.2
+rain_spread_x = 100.0
+rain_drop_speed_mult = 1.0

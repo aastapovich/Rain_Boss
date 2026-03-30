@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://b8wx2iprsjawy"]
+
+[ext_resource type="Script" uid="uid://rv8t5pq5s0p2" path="res://Elements/Wheelbarrow/wheelbarrow.gd" id="1_1q1p4"]
+[ext_resource type="Texture2D" uid="uid://dt0cnimbxluwd" path="res://Assets/Img/Wheel/2_0000.png" id="4_fu7tq"]
+[ext_resource type="Texture2D" uid="uid://16xopvbxxr06" path="res://Assets/Img/Wheel/Whater_well/1_0016.png" id="5_hpclx"]
+[ext_resource type="Texture2D" uid="uid://c6nskp8vgsbgf" path="res://Assets/Img/Wheel/Whater_well/1_0017.png" id="6_nrdkt"]
+[ext_resource type="Texture2D" uid="uid://bbup6qdi5osgi" path="res://Assets/Img/Wheel/Whater_well/1_0018.png" id="7_ylryy"]
+[ext_resource type="Texture2D" uid="uid://d4fdhb5iiydle" path="res://Assets/Img/Wheel/Whater_well/1_0019.png" id="8_1ed2m"]
+[ext_resource type="Texture2D" uid="uid://dqclvc63g18o8" path="res://Assets/Img/Wheel/Whater_well/1_0020.png" id="9_0vjdm"]
+[ext_resource type="Texture2D" uid="uid://oshp17fvl6vo" path="res://Assets/Img/Wheel/Whater_well/1_0021.png" id="10_xo8wh"]
+[ext_resource type="Texture2D" uid="uid://cpp33wn1472ha" path="res://Assets/Img/Wheel/Whater_well/1_0022.png" id="11_ahu8i"]
+[ext_resource type="Texture2D" uid="uid://cerf1y5578nev" path="res://Assets/Img/Player/Shaddow.png" id="12_1gnyn"]
+[ext_resource type="Texture2D" uid="uid://cnsagtoc0q22o" path="res://Assets/Img/Wheel/Whater_well/1_0023.png" id="12_ps413"]
+[ext_resource type="Texture2D" uid="uid://diwhiuu87ycli" path="res://Assets/Img/Wheel/Whater_well/1_0024.png" id="13_b7vao"]
+[ext_resource type="Texture2D" uid="uid://bynfex6aej87q" path="res://Assets/Img/Wheel/Whater_well/1_0025.png" id="14_esaji"]
+[ext_resource type="Texture2D" uid="uid://bn5fpmmhulmr7" path="res://Assets/Img/Wheel/Whater_well/1_0004.png" id="15_j4ax7"]
+[ext_resource type="Texture2D" uid="uid://co608pi2kv2rr" path="res://Assets/Img/Wheel/Whater_well/1_0005.png" id="16_qbev3"]
+[ext_resource type="Texture2D" uid="uid://bun71s67f67q4" path="res://Assets/Img/Wheel/Whater_well/1_0006.png" id="17_e6xel"]
+[ext_resource type="Texture2D" uid="uid://c7ece7wq0kejb" path="res://Assets/Img/Wheel/Whater_well/1_0007.png" id="18_lonhs"]
+[ext_resource type="Texture2D" uid="uid://cqhss8pdvc4d3" path="res://Assets/Img/Wheel/Whater_well/1_0008.png" id="19_mf8eq"]
+[ext_resource type="Texture2D" uid="uid://bq3xojn2443p6" path="res://Assets/Img/Wheel/Shin_2x2.png" id="20_wp15t"]
+[ext_resource type="AudioStream" uid="uid://bhmf7sj05fdv4" path="res://Assets/Sounds/blop2.mp3" id="22_v1kln"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3b4cc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_hpclx")
+}],
+"loop": true,
+"name": &"Whell_10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_hpclx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nrdkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ylryy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1ed2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0vjdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xo8wh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ahu8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ps413")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_b7vao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_esaji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_b7vao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ps413")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ahu8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xo8wh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0vjdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1ed2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ylryy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nrdkt")
+}],
+"loop": true,
+"name": &"Whell_11",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_j4ax7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qbev3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_e6xel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lonhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mf8eq")
+}],
+"loop": false,
+"name": &"Whell_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_j4ax7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qbev3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_e6xel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lonhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mf8eq")
+}],
+"loop": false,
+"name": &"Whell_right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xoyrb"]
+radius = 16.03122
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilm2h"]
+atlas = ExtResource("20_wp15t")
+region = Rect2(134.26866, 1.8306942, 162.74937, 163.13103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11xoe"]
+size = Vector2(75.00004, 2.000002)
+
+[node name="Wheelbarrow" type="Node2D" unique_id=1888234180]
+
+[node name="Ruchka" type="RigidBody2D" parent="." unique_id=755082152]
+linear_damp = 8.0
+angular_damp = 8.0
+script = ExtResource("1_1q1p4")
+warning_fill_threshold = 0.8
+overflow_fill_threshold = 0.9
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ruchka" unique_id=614440795]
+stream = ExtResource("22_v1kln")
+pitch_scale = 0.67
+
+[node name="Shaddow_whell" type="Sprite2D" parent="Ruchka" unique_id=791561801]
+self_modulate = Color(0.93333334, 0.93333334, 0.93333334, 0.49019608)
+position = Vector2(-22.666664, 16)
+scale = Vector2(2.1666667, 0.2865127)
+texture = ExtResource("12_1gnyn")
+
+[node name="DumpPivot" type="Node2D" parent="Ruchka" unique_id=2034325828]
+
+[node name="Whell" type="Sprite2D" parent="Ruchka/DumpPivot" unique_id=1450830288]
+self_modulate = Color(1, 1, 1, 0.7921569)
+light_mask = 0
+scale = Vector2(0.17206961, 0.17206961)
+texture = ExtResource("4_fu7tq")
+offset = Vector2(-185.60934, -39.04364)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ruchka/DumpPivot" unique_id=1268298787]
+modulate = Color(0.4392157, 0.94509804, 1, 0.30588236)
+position = Vector2(-19, 6)
+scale = Vector2(0.29151922, 0.27097127)
+sprite_frames = SubResource("SpriteFrames_3b4cc")
+animation = &"Whell_11"
+autoplay = "Whell_11"
+offset = Vector2(-0.36035156, -35.451164)
+
+[node name="Shin" type="RigidBody2D" parent="Ruchka/DumpPivot" unique_id=1310027660]
+position = Vector2(0.062274933, 0.28177643)
+mass = 2.0
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ruchka/DumpPivot/Shin" unique_id=518661771]
+shape = SubResource("CircleShape2D_xoyrb")
+
+[node name="shin" type="Sprite2D" parent="Ruchka/DumpPivot/Shin" unique_id=402094643]
+scale = Vector2(0.19729558, 0.19729574)
+texture = SubResource("AtlasTexture_ilm2h")
+
+[node name="Ru_Shin" type="PinJoint2D" parent="Ruchka/DumpPivot" unique_id=438003854]
+position = Vector2(0.062274933, 0.28177643)
+node_a = NodePath("../..")
+node_b = NodePath("../Shin")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ruchka" unique_id=879915036]
+position = Vector2(-18, -18)
+shape = SubResource("RectangleShape2D_11xoe")
+
+[node name="HandPoint" type="Node2D" parent="Ruchka" unique_id=987654321]
+position = Vector2(-82, -18)
+
+[node name="WarningLabel" type="Label" parent="Ruchka" unique_id=1950837254]
+modulate = Color(1, 0.9, 0.2, 1)
+z_index = 2
+offset_left = -32.0
+offset_top = -91.0
+offset_right = 2.9999962
+offset_bottom = -33.0
+theme_override_font_sizes/font_size = 42
+text = "!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

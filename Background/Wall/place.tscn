@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://gcnrh1t81vqm"]
+
+[ext_resource type="Script" uid="uid://cjc6slgx16p8l" path="res://Background/Wall/place.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://lqx4jkifm0d7" path="res://Assets/Img/Background/Parallax/place_0.png" id="2_02swf"]
+
+[node name="Place" type="StaticBody2D" unique_id=319281876]
+position = Vector2(0, -2)
+scale = Vector2(1.5, 1)
+collision_mask = 0
+script = ExtResource("1_script")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=588218088]
+position = Vector2(2010.9999, 302.00003)
+scale = Vector2(1.0242591, 1.2006576)
+polygon = PackedVector2Array(-1971.1808, 293.1726, -1508.4072, 295.6713, -1411.752, 295.6713, -1193.0574, 296.50418, -1022.20215, 294.0055, -914.8075, 300.66852, -786.91016, 303.1671, -659.98914, 301.5014, -563.33386, 295.67126, -489.1339, 290.674, -411.0287, 289.00824, -146.44727, 296.50415, 48.815918, 294.83838, 148.40002, 298.16986, 200.14465, 299.83563, 279.22644, 304, 348.5448, 308.16443, 390.52625, 307.33154, 440.31848, 303.1671, 488.15784, 296.50415, 530.1393, 294.0055, 529.16296, 348.97534, -1969.2281, 349.80823)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=951314521]
+position = Vector2(-7.0000005, 584)
+scale = Vector2(1, 0.5)
+texture = ExtResource("2_02swf")
+centered = false

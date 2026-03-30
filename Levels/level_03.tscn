@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://djdrwwak3kjbl"]
+
+[ext_resource type="Texture2D" uid="uid://lqx4jkifm0d7" path="res://Assets/Img/Background/Parallax/place_0.png" id="1_17s77"]
+
+[node name="Level02Content" type="Node2D" unique_id=822628388]
+
+[node name="Cave" type="StaticBody2D" parent="." unique_id=460225873]
+position = Vector2(507, 638)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cave" unique_id=2008950882]
+position = Vector2(2909.0005, 0)
+scale = Vector2(2.6714845, 1)
+texture = ExtResource("1_17s77")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cave" unique_id=1144741975]
+position = Vector2(2918.5005, -4)
+scale = Vector2(2.6550295, 1)
+polygon = PackedVector2Array(-1280, -11, -1051, -3, -608, -6, -323, -8, -162, 2, -48, 10, 51, 8, 253, -14, 366, -15, 613, -2, 801, -4, 974, 7, 1083, 18, 1280, 20, 1280, 100, -1275, 99)

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://nlg8kvagugew"]
+
+[ext_resource type="PackedScene" uid="uid://mat2x8kip8o4" path="res://ui/hud/hud.tscn" id="1_3vkek"]
+[ext_resource type="PackedScene" uid="uid://cwr53umh4a2js" path="res://ui/game_over/game_over.tscn" id="2_xh48a"]
+[ext_resource type="PackedScene" uid="uid://cjcvqiyo8r0w4" path="res://ui/victory/victory.tscn" id="3_2uxy6"]
+[ext_resource type="PackedScene" uid="uid://ctj7ydqw2xfkb" path="res://ui/pause_menu/pause_menu.tscn" id="4_hgyfx"]
+[ext_resource type="PackedScene" uid="uid://c8k3f2oax18ab" path="res://ui/level_intro/level_intro.tscn" id="5_intro"]
+[ext_resource type="PackedScene" uid="uid://c3xf7vq0am2pr" path="res://ui/shop/shop.tscn" id="6_xh48a"]
+[ext_resource type="PackedScene" uid="uid://mhf11tu37mor" path="res://ui/info_popup/info_popup.tscn" id="7_hgyfx"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1031656209]
+
+[node name="Hud" parent="." unique_id=73156855 instance=ExtResource("1_3vkek")]
+
+[node name="GameOver" parent="." unique_id=76123652 instance=ExtResource("2_xh48a")]
+visible = false
+
+[node name="Victory" parent="." unique_id=1550852566 instance=ExtResource("3_2uxy6")]
+visible = false
+
+[node name="pause_menu" parent="." unique_id=281767439 instance=ExtResource("4_hgyfx")]
+visible = false
+
+[node name="LevelIntro" parent="." unique_id=444555666 instance=ExtResource("5_intro")]
+visible = false
+
+[node name="Shop" parent="." unique_id=716300330 instance=ExtResource("6_xh48a")]
+visible = false
+
+[node name="InfoPopup" parent="." unique_id=2101313105 instance=ExtResource("7_hgyfx")]
+visible = false

@@ -1,0 +1,138 @@
+{
+	"textures": [
+		{
+			"image": "Rain_gems.png",
+			"size": {
+				"w": 880,
+				"h": 634
+			},
+			"sprites": [
+				{
+					"filename": "gems_0.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 220,
+						"h": 317
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "gems_1.png",
+					"region": {
+						"x": 0,
+						"y": 317,
+						"w": 220,
+						"h": 317
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "gems_2.png",
+					"region": {
+						"x": 220,
+						"y": 0,
+						"w": 220,
+						"h": 317
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "gems_3.png",
+					"region": {
+						"x": 220,
+						"y": 317,
+						"w": 220,
+						"h": 317
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "gems_4.png",
+					"region": {
+						"x": 440,
+						"y": 0,
+						"w": 220,
+						"h": 317
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "gems_5.png",
+					"region": {
+						"x": 440,
+						"y": 317,
+						"w": 220,
+						"h": 317
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "gems_6.png",
+					"region": {
+						"x": 660,
+						"y": 0,
+						"w": 220,
+						"h": 317
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "gems_7.png",
+					"region": {
+						"x": 660,
+						"y": 317,
+						"w": 220,
+						"h": 317
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.7",
+		"format": "RGBA8888",
+	}
+}

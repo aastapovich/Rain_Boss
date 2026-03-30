@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://8qvselotopjd"]
+
+[ext_resource type="Texture2D" uid="uid://bqjf27m2j8wbl" path="res://Assets/Img/enemy/Sign/Sign1.png" id="1_74ew7"]
+[ext_resource type="Script" uid="uid://c41lg48ys4sd2" path="res://Elements/Enemy/stop_point.gd" id="1_ftikh"]
+
+[node name="Stop_point" type="Sprite2D" unique_id=1752992778]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_74ew7")
+script = ExtResource("1_ftikh")

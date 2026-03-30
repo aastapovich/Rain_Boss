@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LevelData" format=3 uid="uid://dm87ptks7ef1x"]
+
+[ext_resource type="PackedScene" uid="uid://dc0ttuhrs083b" path="res://Levels/level_02.tscn" id="1_jh66j"]
+[ext_resource type="Script" uid="uid://be0ujbn0py4q4" path="res://Core/level_data.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+level_id = 2
+level_name = "Пещера — Уровень 2"
+level_scene = ExtResource("1_jh66j")
+player_start_position = Vector2(50, 437)
+max_exit_point = 300
+level_description = "[b]Уровень 2[/b]: Тайны подземных лабиринтов и бесчисленное множество подземных сокровищ. Становится больше загадок и новых врагов.
+
+Собери [b]300 карат[/b] драгоценных камней, среди сокровищ ты найдешь ключ от двери, за ней выход..."

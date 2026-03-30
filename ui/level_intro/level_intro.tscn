@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://c8k3f2n9x18ab"]
+
+[ext_resource type="Script" path="res://ui/level_intro/level_intro.gd" id="1_intro"]
+
+[node name="LevelIntro" type="CanvasLayer" unique_id=111222333]
+layer = 128
+process_mode = 3
+script = ExtResource("1_intro")
+
+[node name="Background" type="ColorRect" parent="." unique_id=111222334]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+
+[node name="Panel" type="Panel" parent="." unique_id=111222335]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_left = -260.0
+offset_top = -200.0
+offset_right = 260.0
+offset_bottom = 200.0
+
+[node name="VBox" type="VBoxContainer" parent="Panel" unique_id=111222336]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+theme_override_constants/separation = 14
+
+[node name="TitleLabel" type="Label" parent="Panel/VBox" unique_id=111222337]
+layout_mode = 2
+text = "Уровень"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 22
+
+[node name="DescLabel" type="RichTextLabel" parent="Panel/VBox" unique_id=111222338]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+fit_content = false
+text = ""
+
+[node name="ContinueButton" type="Button" parent="Panel/VBox" unique_id=111222339]
+layout_mode = 2
+text = "► Продолжить"
+
+[connection signal="pressed" from="Panel/VBox/ContinueButton" to="." method="_on_continue_pressed"]

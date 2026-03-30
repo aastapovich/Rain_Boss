@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://v7kkbdvf07yt"]
+
+[ext_resource type="Texture2D" uid="uid://bmyn0tmyjdukt" path="res://Assets/Img/Plot .png" id="1_w47d7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqv51"]
+size = Vector2(98, 11)
+
+[node name="Exit_plot" type="Node2D" unique_id=1263592679]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=124932171]
+offset_left = -48.0
+offset_top = 17.0
+offset_right = 50.0
+offset_bottom = 71.0
+scale = Vector2(1, 0.955)
+pivot_offset = Vector2(47, 0)
+color = Color(0, 0.18039216, 0.3882353, 0.85882354)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=25592776]
+scale = Vector2(0.062963, 0.062963)
+texture = ExtResource("1_w47d7")
+
+[node name="Plot" type="Area2D" parent="." unique_id=1895046052]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plot" unique_id=1918888818]
+shape = SubResource("RectangleShape2D_kqv51")

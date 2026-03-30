@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://c3xf7vq0am2pr"]
+
+[ext_resource type="Script" path="res://ui/shop/shop.gd" id="1_shop"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.06, 0.07, 0.11, 0.97)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.25, 0.35, 0.6, 0.8)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_left"]
+bg_color = Color(0.08, 0.09, 0.14, 1.0)
+border_width_right = 1
+border_color = Color(0.2, 0.28, 0.5, 0.6)
+corner_radius_top_left = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_header"]
+bg_color = Color(0.05, 0.06, 0.10, 1.0)
+border_width_bottom = 1
+border_color = Color(0.2, 0.28, 0.5, 0.5)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[node name="Shop" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+script = ExtResource("1_shop")
+
+[node name="Overlay" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.05, 0.82)
+
+[node name="Panel" type="PanelContainer" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.05
+anchor_top = 0.04
+anchor_right = 0.95
+anchor_bottom = 0.96
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBox" type="VBoxContainer" parent="Overlay/Panel"]
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 0
+
+[node name="Header" type="PanelContainer" parent="Overlay/Panel/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 48)
+theme_override_styles/panel = SubResource("StyleBoxFlat_header")
+
+[node name="HeaderHBox" type="HBoxContainer" parent="Overlay/Panel/VBox/Header"]
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 8
+offset_left = 8.0
+offset_right = -8.0
+
+[node name="BackButton" type="Button" parent="Overlay/Panel/VBox/Header/HeaderHBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(40, 0)
+theme_override_font_sizes/font_size = 18
+text = "◄"
+tooltip_text = "Назад"
+
+[node name="Breadcrumb" type="Label" parent="Overlay/Panel/VBox/Header/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.75, 0.85, 1, 1)
+text = "Магазин"
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Overlay/Panel/VBox/Header/HeaderHBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(40, 0)
+theme_override_font_sizes/font_size = 18
+text = "✕"
+tooltip_text = "Закрыть"
+
+[node name="HSplit" type="HBoxContainer" parent="Overlay/Panel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="LeftPanel" type="PanelContainer" parent="Overlay/Panel/VBox/HSplit"]
+layout_mode = 2
+custom_minimum_size = Vector2(180, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_left")
+
+[node name="LeftVBox" type="VBoxContainer" parent="Overlay/Panel/VBox/HSplit/LeftPanel"]
+layout_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 4
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+
+[node name="LeftList" type="VBoxContainer" parent="Overlay/Panel/VBox/HSplit/LeftPanel/LeftVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 4
+
+[node name="ApplySep" type="HSeparator" parent="Overlay/Panel/VBox/HSplit/LeftPanel/LeftVBox"]
+layout_mode = 2
+modulate = Color(0.3, 0.5, 0.9, 0.5)
+
+[node name="ApplyButton" type="Button" parent="Overlay/Panel/VBox/HSplit/LeftPanel/LeftVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 36)
+theme_override_font_sizes/font_size = 14
+text = "Применить"
+
+[node name="RightScroll" type="ScrollContainer" parent="Overlay/Panel/VBox/HSplit"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightGrid" type="GridContainer" parent="Overlay/Panel/VBox/HSplit/RightScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+
+[node name="Footer" type="HBoxContainer" parent="Overlay/Panel/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 36)
+theme_override_constants/separation = 16
+offset_left = 16.0
+offset_right = -16.0
+
+[node name="CurrencyLabel" type="Label" parent="Overlay/Panel/VBox/Footer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.92, 0.55, 1)
+text = "G: 0   XP: 0   💎 0   💧 0"
+vertical_alignment = 1

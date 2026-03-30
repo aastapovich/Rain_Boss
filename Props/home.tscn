@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b3m3sfl1h1fgv"]
+
+[ext_resource type="Texture2D" uid="uid://c2tnnkj0b8nbr" path="res://Assets/Img/Background/Дом из бревен.png" id="1_b3hk7"]
+[ext_resource type="Script" uid="uid://8vctdln13fbd" path="res://Props/home_area.gd" id="1_koijv"]
+[ext_resource type="Script" uid="uid://b2vmanrvu28tk" path="res://Elements/Enemy/Rain/drip_emitter.gd" id="3_b6mkb"]
+[ext_resource type="Texture2D" uid="uid://cerf1y5578nev" path="res://Assets/Img/Player/Shaddow.png" id="3_hgi6w"]
+
+[node name="Home" type="Node2D" unique_id=1068315644]
+
+[node name="Home" type="Area2D" parent="." unique_id=221653335]
+light_mask = 0
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_koijv")
+
+[node name="ДомИзБревен" type="Sprite2D" parent="Home" unique_id=1676287966]
+position = Vector2(-3.1564941, -6.999996)
+scale = Vector2(0.5165224, 0.38260818)
+texture = ExtResource("1_b3hk7")
+offset = Vector2(16.87085, -457.7427)
+
+[node name="Sprite2D" type="Sprite2D" parent="Home" unique_id=109863468]
+position = Vector2(-8, -9.5)
+scale = Vector2(12.749999, 0.578125)
+texture = ExtResource("3_hgi6w")
+
+[node name="Home_collision" type="CollisionPolygon2D" parent="Home" unique_id=912658260]
+light_mask = 0
+visibility_layer = 0
+position = Vector2(-2.1652527, -216.56802)
+scale = Vector2(1.9200006, 1.76)
+polygon = PackedVector2Array(-142, -8, -3, -75, 137, -8, 137, 13, 160.4212, 20.209106, 111, 22, 113, 119, -115, 119, -115, -3)
+
+[node name="drip_emitter" type="Node2D" parent="." unique_id=67904143]
+position = Vector2(300, -183)
+script = ExtResource("3_b6mkb")
+
+[node name="Label" type="Label" parent="." unique_id=953953875]
+self_modulate = Color(0.8627451, 0.54901963, 0, 1)
+offset_left = -180.0
+offset_top = -238.0
+offset_right = -2.0
+offset_bottom = -188.0
+theme_override_font_sizes/font_size = 36
+text = "МАГАЗИН"

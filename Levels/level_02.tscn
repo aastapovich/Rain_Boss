@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://dc0ttuhrs083b"]
+
+[ext_resource type="Texture2D" uid="uid://df2flwwn8koq5" path="res://Assets/Img/Background/Parallax/sky.png" id="1_d3ajd"]
+[ext_resource type="Texture2D" uid="uid://b51yydyoqxgch" path="res://Assets/Img/cave/cave_0_1.png" id="2_ffslo"]
+[ext_resource type="Texture2D" uid="uid://28l4pv5yriub" path="res://Assets/Img/cave/wall_1.png" id="2_x5tb4"]
+[ext_resource type="Texture2D" uid="uid://c315ro13ro6ew" path="res://Assets/Img/cave/cave_1.png" id="4_1nift"]
+[ext_resource type="Texture2D" uid="uid://dcus58kf5fi7r" path="res://Assets/Img/cave/Pine_black-0.png" id="4_vkhwo"]
+[ext_resource type="Texture2D" uid="uid://dpfjw7y045k05" path="res://Assets/Img/cave/cave_2.png" id="5_hv8fo"]
+[ext_resource type="Texture2D" uid="uid://edfdypawres5" path="res://Assets/Img/Background/Rock/Rock_02.png" id="5_vkhwo"]
+[ext_resource type="Texture2D" uid="uid://b3v47n71m3u8p" path="res://Assets/Img/cave/cave_3.png" id="6_hv8fo"]
+[ext_resource type="Texture2D" uid="uid://7cmi6xobcqu8" path="res://Assets/Img/cave/cave_4.png" id="7_ffslo"]
+[ext_resource type="Script" uid="uid://b2vmanrvu28tk" path="res://Elements/Enemy/Rain/drip_emitter.gd" id="10_ljuhi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkhwo"]
+atlas = ExtResource("2_ffslo")
+region = Rect2(0, 0, 499, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3use3"]
+atlas = ExtResource("4_vkhwo")
+region = Rect2(0, 0, 1280, 720)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljuhi"]
+atlas = ExtResource("5_vkhwo")
+region = Rect2(655.01013, 291.03006, 537.2401, 101.640045)
+
+[node name="Level02Content" type="Node2D" unique_id=1069021215]
+
+[node name="BG_02" type="Node2D" parent="." unique_id=1634807694]
+
+[node name="Fon" type="Sprite2D" parent="BG_02" unique_id=1552890349]
+z_index = -5
+scale = Vector2(0.51, 1)
+texture = ExtResource("1_d3ajd")
+centered = false
+
+[node name="Parallax2D" type="Parallax2D" parent="BG_02" unique_id=95349019]
+z_index = -10
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(1280, 0)
+
+[node name="Layer_0" type="Sprite2D" parent="BG_02/Parallax2D" unique_id=1534550153]
+self_modulate = Color(0.32915837, 0.3291584, 0.3291584, 1)
+texture = ExtResource("2_x5tb4")
+centered = false
+
+[node name="Parallax2D2" type="Parallax2D" parent="BG_02" unique_id=1240810037]
+z_index = 1
+scroll_scale = Vector2(0, 0)
+
+[node name="Parallax2D3" type="Parallax2D" parent="BG_02" unique_id=1750554103]
+
+[node name="Place_02" type="Node2D" parent="BG_02" unique_id=1410740309]
+
+[node name="Frame_0" type="Node2D" parent="BG_02/Place_02" unique_id=570067812]
+
+[node name="Rock_01" type="Sprite2D" parent="BG_02/Place_02/Frame_0" unique_id=412078397]
+z_index = 1
+position = Vector2(874, 395)
+scale = Vector2(1.007014, 1.0096154)
+texture = SubResource("AtlasTexture_vkhwo")
+
+[node name="Sprite2D" type="Sprite2D" parent="BG_02/Place_02/Frame_0" unique_id=546559227]
+scale = Vector2(1.01, 1)
+texture = SubResource("AtlasTexture_3use3")
+centered = false
+
+[node name="Rock_02" type="Sprite2D" parent="BG_02/Place_02/Frame_0" unique_id=714419485]
+z_index = 1
+position = Vector2(933.25, 666)
+scale = Vector2(1.0121043, 1.049505)
+texture = SubResource("AtlasTexture_ljuhi")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BG_02/Place_02" unique_id=933331627]
+position = Vector2(1280, 0)
+scale = Vector2(1.01, 1)
+texture = ExtResource("4_1nift")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="BG_02/Place_02" unique_id=85394965]
+position = Vector2(2560, 0)
+scale = Vector2(1.01, 1)
+texture = ExtResource("5_hv8fo")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="BG_02/Place_02" unique_id=251761670]
+position = Vector2(3840, 0)
+scale = Vector2(1.01, 1)
+texture = ExtResource("6_hv8fo")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="BG_02/Place_02" unique_id=1637165315]
+position = Vector2(5120, 0)
+scale = Vector2(1.01, 1)
+texture = ExtResource("7_ffslo")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BG_02/Place_02" unique_id=220313842]
+z_index = 10
+
+[node name="Collision_0" type="CollisionPolygon2D" parent="BG_02/Place_02/StaticBody2D" unique_id=46673807]
+position = Vector2(0, 447)
+polygon = PackedVector2Array(0, -10, 379, -10, 426, 18, 504, 58, 593, 97, 705, 146, 858, 183, 1024, 208, 1081, 218, 1160, 232, 1224, 241, 1272, 244, 1320, 252, 1439, 235, 1612, 209, 1760, 182, 1844, 176, 1906, 171, 1930, 173, 1968, 169, 2014, 166, 2088, 166, 2136, 174, 2179, 172, 2294, 165, 2351, 175, 2432, 201, 2532, 228, 2598, 231, 2669, 222, 2720, 215, 2781, 202, 2856, 197, 2952, 181, 3044, 161, 3116, 154, 3238, 148, 3337, 138, 3462, 113, 3541, 18, 3612, -36, 3665, -77, 3665, -77, 3714, -64, 3745, -56, 3786, -35, 3840, -17, 3865, -20, 3907, -40, 3953, -76, 4016, -78, 4310, -78, 4381, -28, 4427, 4, 4451, 13, 4465, 24, 4506, 48, 4558, 76, 4621, 104, 4768, 160, 4875, 198, 4930, 181, 4997, 160, 5059, 149, 5122, 146, 5174, 163, 5244, 186, 5291, 162, 5430, 117, 5556, 71, 5667, 47, 5756, 12, 5868, 12, 6045, 11, 6312, 15, 6393, 12, 6398, -80, 6402, 276, -1, 273)
+
+[node name="Collision_1" type="CollisionPolygon2D" parent="BG_02/Place_02/StaticBody2D" unique_id=576672769]
+visible = false
+polygon = PackedVector2Array(362, 437, 626, 437, 726, 431, 999, 413, 1097, 411, 1143, 255, 1176, 582)
+disabled = true
+
+[node name="Collision_3" type="CollisionPolygon2D" parent="BG_02/Place_02/StaticBody2D" unique_id=513640660]
+visible = false
+polygon = PackedVector2Array(2436, 646, 2690, 621, 2847, 615, 2904, 601, 2952, 584, 3026, 544, 3087, 502, 3129, 462, 3163, 447, 3195, 435, 3254, 414, 3352, 382, 3421, 371, 3442, 376, 3472, 368, 3487, 371, 3508, 368, 3579, 369, 3666, 371, 3734, 388, 3804, 368, 3858, 368, 3955, 369, 4317, 369, 4370, 379, 4416, 391, 4456, 388, 4493, 397, 4550, 412, 4602, 432, 4636, 440, 4728, 498, 4753, 512, 4824, 569, 4884, 597, 4930, 627, 4951, 621, 4992, 609, 5056, 596, 5121, 593, 5170, 606, 5246, 635, 5282, 615, 5328, 601, 5361, 588, 5413, 568, 5487, 527, 5579, 497, 5643, 477, 5690, 460, 5705, 458, 5779, 458, 5908, 458, 6018, 460, 6283, 460, 6400, 460, 6400, 361, 6422, 477, 6402, 720, 1728, 717, 1730, 563, 1757, 629, 1808, 624, 1850, 621, 1904, 618, 1932, 621, 1989, 612, 2058, 612, 2084, 612, 2124, 620, 2151, 619, 2178, 619, 2195, 617, 2221, 613, 2238, 616, 2259, 615, 2276, 612, 2298, 613, 2348, 622, 2387, 634)
+disabled = true
+
+[node name="Enemy" type="Node2D" parent="." unique_id=84527419]
+position = Vector2(210, 264)
+
+[node name="Rain" type="Node2D" parent="Enemy" unique_id=782254204]
+script = ExtResource("10_ljuhi")
+drops_per_second = 5.0

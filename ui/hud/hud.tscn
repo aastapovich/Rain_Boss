@@ -1,0 +1,216 @@
+[gd_scene format=3 uid="uid://mat2x8kip8o4"]
+
+[ext_resource type="Script" uid="uid://dkvclnb1llrs8" path="res://ui/hud/hud.gd" id="1_hd233"]
+[ext_resource type="Texture2D" uid="uid://hls50ony0k5b" path="res://Assets/Img/hud_img/сердечко_min.png" id="2_qupcm"]
+
+[node name="HUD" type="CanvasLayer" unique_id=73156855]
+script = ExtResource("1_hd233")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1599560507]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2029299999]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Row1" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=651957890]
+layout_mode = 2
+
+[node name="LevelLabel" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=2126511128]
+modulate = Color(0, 0, 0.976471, 0.780392)
+layout_mode = 2
+text = "Ур: "
+
+[node name="LevelValue" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=1538337569]
+modulate = Color(0, 0.443137, 1, 1)
+layout_mode = 2
+text = "1"
+
+[node name="SpA" type="Control" parent="MarginContainer/VBoxContainer/Row1" unique_id=1176164250]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="GoldIcon" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=1556858419]
+modulate = Color(0.9, 0.7, 0, 1)
+layout_mode = 2
+text = "💰 "
+
+[node name="Gold" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=632900225]
+modulate = Color(1, 0.843, 0, 1)
+layout_mode = 2
+text = "0"
+
+[node name="SpC" type="Control" parent="MarginContainer/VBoxContainer/Row1" unique_id=466058701]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="GemsIcon" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111001]
+modulate = Color(0.4, 0.8, 1.0, 1)
+layout_mode = 2
+text = "💎 "
+
+[node name="Gems" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111002]
+modulate = Color(0.2, 0.7, 1.0, 1)
+layout_mode = 2
+text = "0"
+
+[node name="SpGems" type="Control" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111003]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="TokensIcon" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111004]
+modulate = Color(1.0, 0.75, 0.2, 1)
+layout_mode = 2
+text = "🎫 "
+
+[node name="Tokens" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111005]
+modulate = Color(1.0, 0.65, 0.0, 1)
+layout_mode = 2
+text = "0"
+
+[node name="SpTokens" type="Control" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111006]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="WaterBankIcon" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111010]
+modulate = Color(0.2, 0.7, 1.0, 1)
+layout_mode = 2
+text = "🫗 "
+
+[node name="WaterBank" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111011]
+modulate = Color(0.2, 0.8, 1.0, 1)
+layout_mode = 2
+text = "0"
+
+[node name="SpWater" type="Control" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111012]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="XPIcon" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111013]
+modulate = Color(0.9, 0.8, 0.2, 1)
+layout_mode = 2
+text = "⭐ "
+
+[node name="SkillXp" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111014]
+modulate = Color(1.0, 0.9, 0.3, 1)
+layout_mode = 2
+text = "0"
+
+[node name="SpXP" type="Control" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111015]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="PointsIcon" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=1705720088]
+modulate = Color(0, 0.2, 0.6, 0.9)
+layout_mode = 2
+text = "💧 "
+
+[node name="Points" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=684653267]
+modulate = Color(0, 0.2, 0.5, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+
+[node name="Expand1" type="Control" parent="MarginContainer/VBoxContainer/Row1" unique_id=1471463401]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HpValue" type="Label" parent="MarginContainer/VBoxContainer/Row1" unique_id=111111007]
+modulate = Color(0.9, 0.2, 0.2, 1)
+layout_mode = 2
+text = "100"
+
+[node name="HealthBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/Row1" unique_id=2127817004]
+custom_minimum_size = Vector2(50, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+show_percentage = false
+
+[node name="SpB" type="Control" parent="MarginContainer/VBoxContainer/Row1" unique_id=31682936]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+
+[node name="HeartBox" type="Control" parent="MarginContainer/VBoxContainer/Row1" unique_id=318277263]
+custom_minimum_size = Vector2(28, 20)
+layout_mode = 2
+
+[node name="HeartBG" type="TextureRect" parent="MarginContainer/VBoxContainer/Row1/HeartBox" unique_id=846733102]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qupcm")
+stretch_mode = 5
+
+[node name="LivesCount" type="Label" parent="MarginContainer/VBoxContainer/Row1/HeartBox" unique_id=361158487]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpD" type="Control" parent="MarginContainer/VBoxContainer/Row1" unique_id=268995045]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" unique_id=1175322605]
+layout_mode = 2
+alignment = 2
+
+[node name="Row2" type="HBoxContainer" parent="MarginContainer/VBoxContainer2" unique_id=1116329208]
+layout_mode = 2
+
+[node name="Expand0" type="Control" parent="MarginContainer/VBoxContainer2/Row2" unique_id=345982880]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Expand1" type="Control" parent="MarginContainer/VBoxContainer2/Row2" unique_id=1627432783]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Expand2" type="Control" parent="MarginContainer/VBoxContainer2/Row2" unique_id=394846504]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ExitIcon" type="Label" parent="MarginContainer/VBoxContainer2/Row2" unique_id=1705720087]
+modulate = Color(0, 0.6, 0, 1)
+layout_mode = 2
+text = "→ "
+
+[node name="WhellIcon" type="Label" parent="MarginContainer/VBoxContainer2/Row2" unique_id=831820755]
+modulate = Color(0, 0.376471, 0, 1)
+layout_mode = 2
+text = "🪣 "
+
+[node name="Wheelbarrow" type="Label" parent="MarginContainer/VBoxContainer2/Row2" unique_id=113034806]
+modulate = Color(0, 0.243137, 0.0627451, 1)
+layout_mode = 2
+text = "0"
+
+[node name="ExitBar" type="ProgressBar" parent="MarginContainer/VBoxContainer2/Row2" unique_id=1164115512]
+custom_minimum_size = Vector2(80, 14)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 30.0
+show_percentage = false
+
+[node name="ExitLabel" type="Label" parent="MarginContainer/VBoxContainer2/Row2" unique_id=1292371365]
+modulate = Color(0, 0.5, 0, 1)
+layout_mode = 2
+text = " 0/300"

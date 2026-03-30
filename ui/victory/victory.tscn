@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://cjcvqiyo8r0w4"]
+
+[ext_resource type="Script" uid="uid://bk5dcnvj2nxj1" path="res://ui/victory/victory.gd" id="1_victory"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
+bg_color = Color(0.2, 0.6, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1, 0.8, 0.1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hover"]
+bg_color = Color(0.1, 0.8, 0.1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 1, 0.2, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu"]
+bg_color = Color(0.5, 0.5, 0.5, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.3, 0.3, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Victory" type="CanvasLayer" unique_id=1550852566]
+process_mode = 2
+script = ExtResource("1_victory")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=123978268]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.2, 0, 0.7)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1794573402]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=159542541]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1092486997]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "ПОБЕДА!"
+horizontal_alignment = 1
+
+[node name="Message" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2035492092]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 1, 0.8, 1)
+theme_override_font_sizes/font_size = 24
+text = "Вы собрали достаточно воды!
+Мост поднялся и теперь можно перейти на следующий уровень."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1998439247]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="NextLevelButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1937489795]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+text = "Следующий уровень"
+
+[node name="MenuButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=555617295]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_menu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hover")
+text = "В меню"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/NextLevelButton" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MenuButton" to="." method="_on_menu_pressed"]

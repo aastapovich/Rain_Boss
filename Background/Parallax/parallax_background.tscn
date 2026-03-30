@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bc86jmj4h3c25"]
+
+[ext_resource type="Texture2D" uid="uid://df2flwwn8koq5" path="res://Assets/Img/Background/Parallax/sky.png" id="1_o74in"]
+[ext_resource type="Texture2D" path="res://Assets/Img/Mario.png" id="2_ooc4j"]
+[ext_resource type="Texture2D" uid="uid://c0qnyrlhlsndv" path="res://Assets/Img/Background/Parallax/Parallax_01.png" id="3_e4uac"]
+[ext_resource type="Texture2D" uid="uid://cpt0tl2blhueq" path="res://Assets/Img/Background/Parallax/Parallax_03.png" id="4_3oy4d"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+scale = Vector2(1.117, 1.2)
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(2293, 0)
+
+[node name="Fon" type="Sprite2D" parent="ParallaxLayer"]
+scale = Vector2(0.955685, 1)
+texture = ExtResource("1_o74in")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer/Fon"]
+position = Vector2(1775.28, 530)
+scale = Vector2(0.447628, 0.416667)
+texture = ExtResource("2_ooc4j")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer/Fon"]
+position = Vector2(1046.37, 536.667)
+scale = Vector2(0.447628, 0.416667)
+texture = ExtResource("2_ooc4j")
+centered = false
+flip_h = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+scale = Vector2(1.117, 1.2)
+motion_scale = Vector2(0.5, 1)
+
+[node name="Fon2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-300, 0)
+scale = Vector2(1.32785, 0.833333)
+texture = ExtResource("3_e4uac")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+scale = Vector2(1.117, 1.2)
+motion_scale = Vector2(0.75, 1)
+
+[node name="Fon" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(-200, 0)
+scale = Vector2(1.23587, 0.833333)
+texture = ExtResource("4_3oy4d")
+centered = false

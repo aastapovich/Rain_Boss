@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c3egb4i8c6cfl"]
+
+[ext_resource type="Script" uid="uid://o3djygqpqalr" path="res://game.gd" id="1_game"]
+[ext_resource type="PackedScene" uid="uid://nlg8kvagugew" path="res://ui/game_ui.tscn" id="41_7vltt"]
+[ext_resource type="Script" uid="uid://xryx4fvx2uo" path="res://Core/inventory_system.gd" id="60_invsys"]
+
+[node name="Game" type="Node2D" unique_id=972171414]
+script = ExtResource("1_game")
+
+[node name="LevelContent" type="Node2D" parent="." unique_id=2100000001]
+
+[node name="Elements" type="Node2D" parent="." unique_id=1726137771]
+
+[node name="Progression" type="Node" parent="." unique_id=618154253]
+
+[node name="InventorySystem" type="Node" parent="Progression" unique_id=958088354]
+script = ExtResource("60_invsys")
+
+[node name="SkillSystem" type="Node" parent="Progression" unique_id=1937974885]
+
+[node name="ShopSystem" type="Node" parent="Progression" unique_id=1777854991]
+
+[node name="CanvasLayer" parent="." unique_id=1031656209 instance=ExtResource("41_7vltt")]
+layer = 20

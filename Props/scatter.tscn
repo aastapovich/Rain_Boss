@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dahgflc73tpq0"]
+
+[ext_resource type="Script" uid="uid://blehcnoynshbt" path="res://addons/scatter2d/src/scatter2d.gd" id="1_r6yhx"]
+[ext_resource type="Script" uid="uid://xn7w5wbnwdme" path="res://addons/scatter2d/src/stack/modifier_stack.gd" id="2_r5epj"]
+[ext_resource type="Script" uid="uid://mvkmr4qqe3h0" path="res://addons/scatter2d/src/modifiers/modifier_base.gd" id="3_ludk4"]
+[ext_resource type="Script" uid="uid://dud2pkt70o4ui" path="res://addons/scatter2d/src/modifiers/mod_create_inside_random.gd" id="4_ppjn1"]
+[ext_resource type="Script" uid="uid://h0re0ckmxr17" path="res://addons/scatter2d/src/scatter_shape.gd" id="5_776w4"]
+[ext_resource type="Script" uid="uid://1wbh6o12u2v4" path="res://addons/scatter2d/src/shapes/shape_box.gd" id="6_o1n3u"]
+[ext_resource type="Script" uid="uid://8wl6weshukhx" path="res://addons/scatter2d/src/scatter_item.gd" id="7_jicmr"]
+
+[sub_resource type="Resource" id="Resource_a8w4h"]
+script = ExtResource("4_ppjn1")
+amount = 30
+reference_frame = 1
+
+[sub_resource type="Resource" id="Resource_nfk2f"]
+script = ExtResource("2_r5epj")
+stack = Array[ExtResource("3_ludk4")]([SubResource("Resource_a8w4h")])
+
+[sub_resource type="Resource" id="Resource_ofdrb"]
+script = ExtResource("6_o1n3u")
+size = Vector2(3900, 5)
+metadata/_custom_type_script = "uid://1wbh6o12u2v4"
+
+[node name="Scatter" type="Node2D" unique_id=2008980721]
+z_index = 6
+script = ExtResource("1_r6yhx")
+dbg_disable_thread = true
+modifier_stack = SubResource("Resource_nfk2f")
+metadata/_custom_type_script = "uid://blehcnoynshbt"
+
+[node name="ScatterShape" type="Node2D" parent="." unique_id=896636578]
+position = Vector2(1949, 715)
+script = ExtResource("5_776w4")
+shape = SubResource("Resource_ofdrb")
+metadata/_custom_type_script = "uid://h0re0ckmxr17"
+
+[node name="ScatterItem" type="Node2D" parent="." unique_id=1229790408]
+script = ExtResource("7_jicmr")
+path = "uid://dqbfy32y0iyem"
+metadata/_custom_type_script = "uid://8wl6weshukhx"
+
+[node name="ScatterItem2" type="Node2D" parent="." unique_id=1977770502]
+script = ExtResource("7_jicmr")
+path = "uid://cu1lis4pewesx"
+metadata/_custom_type_script = "uid://8wl6weshukhx"
+
+[node name="ScatterItem3" type="Node2D" parent="." unique_id=1347869114]
+script = ExtResource("7_jicmr")
+path = "uid://bpdkrqqk8xrp2"
+metadata/_custom_type_script = "uid://8wl6weshukhx"
+
+[node name="ScatterItem4" type="Node2D" parent="." unique_id=13391975]
+script = ExtResource("7_jicmr")
+path = "uid://j7ubt1v8h78a"
+metadata/_custom_type_script = "uid://8wl6weshukhx"

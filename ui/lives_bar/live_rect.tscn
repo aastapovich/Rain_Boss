@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bi40jlqggynqm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jgem"]
+region = Rect2(9, 9, 30, 29)
+
+[node name="LiveRect" type="TextureRect" unique_id=923780732]
+custom_minimum_size = Vector2(16, 16)
+texture = SubResource("AtlasTexture_2jgem")
+expand_mode = 1
+stretch_mode = 5
