@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cd6udoqt57ojd"]
 
 [ext_resource type="Script" uid="uid://ovvou6fjeeef" path="res://ui/main_menu/main_menu.gd" id="1_main_menu"]
-[ext_resource type="Texture2D" uid="uid://isdjmqgjg8le" path="res://Assets/Img/cloud/Cloud_01/Cl1.png" id="2_clouds"]
+[ext_resource type="Texture2D" uid="uid://isdjmqgjg8le" path="res://Assets/Img/Environment/Cloud/Cloud_01/Cl1.png" id="2_clouds"]
 [ext_resource type="AudioStream" uid="uid://bm8hlk1vwetcj" path="res://Assets/Sounds/frog.mp3" id="3_omy8q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_normal"]
@@ -48,7 +48,7 @@ loop = true
 script = ExtResource("1_main_menu")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1396891394]
-self_modulate = Color(1, 1, 1, 0.0627451)
+self_modulate = Color(1, 1, 1, 0.41960785)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -57,7 +57,7 @@ grow_vertical = 2
 color = Color(0.1, 0.2, 0.4, 1)
 
 [node name="Clouds" type="TextureRect" parent="Background" unique_id=1230079725]
-self_modulate = Color(1, 1, 1, 0.0627451)
+self_modulate = Color(1, 1, 1, 0.41960785)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -73,7 +73,7 @@ expand_mode = 1
 stretch_mode = 6
 
 [node name="Cloud2" type="TextureRect" parent="Background" unique_id=1023780278]
-self_modulate = Color(1, 1, 1, 0.0627451)
+self_modulate = Color(1, 1, 1, 0.41960785)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -89,7 +89,7 @@ expand_mode = 1
 stretch_mode = 6
 
 [node name="Cloud3" type="TextureRect" parent="Background" unique_id=970663853]
-self_modulate = Color(1, 1, 1, 0.0627451)
+self_modulate = Color(1, 1, 1, 0.41960785)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerConfig" format=3]
+
+[ext_resource type="Script" uid="uid://bumcxx3p5kwou" path="res://Player/player_config.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+speed_norm = 130.0
+speed_shift = 180.0
+immune_to_rain = true
+immune_to_puddles = true
+immune_to_animals = true
+immune_to_lightning = true
+damage_multiplier = 0.1
+sprint_duration = 99.0
+sprint_cooldown = 1.0

@@ -3,6 +3,17 @@
 ## Подписывайтесь через Events.<signal>.connect() в любом скрипте.
 extends Node
 
+
+# Сигналы для инвентаря
+@warning_ignore("unused_signal")
+signal item_spawned(player: CharacterBody2D, item_id: String, physics_body: RigidBody2D, root: Node2D, anim_sprite: AnimatedSprite2D, dump_pivot: Node2D)
+@warning_ignore("unused_signal")
+signal item_despawned(player: Node, item_id: String)
+
+#Сигнал готовности героя
+@warning_ignore("unused_signal")
+signal player_ready
+
 # --- UI / HUD ---
 @warning_ignore("unused_signal")
 signal points_changed(points: int)
@@ -18,16 +29,6 @@ signal level_changed(level: int)
 # --- Тачка ---
 @warning_ignore("unused_signal")
 signal wheelbarrow_changed(amount: int)    # заполнение тачки (0..100) — для HUD и анимаций дождя
-@warning_ignore("unused_signal")
-signal wheelbarrow_spawned(player: Node, wheelbarrow_node: Node, wheelbarrow_root: Node, wheelbarrow_anim: Node, dump_pivot: Node)
-@warning_ignore("unused_signal")
-signal wheelbarrow_despawned(player: Node)
-@warning_ignore("unused_signal")
-signal wheelbarrow_unload_started(player: Node, wheelbarrow_node: Node)
-@warning_ignore("unused_signal")
-signal wheelbarrow_unload_finished(player: Node, amount_unloaded: int)
-@warning_ignore("unused_signal")
-signal wheelbarrow_fill_changed(player: Node, fill_amount: int)
 
 # --- Игровые события ---
 @warning_ignore("unused_signal")

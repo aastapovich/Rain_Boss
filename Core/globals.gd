@@ -59,14 +59,15 @@ var passive_perks: Array   = []
 func _ready() -> void:
 	SaveManager.load_progress(self)
 
-## Сбрасывает только SESSION-данные (здоровье, очки, тачка, позиция, экип ид).
+## Сбрасывает только SESSION-данные (здоровье, очки, тачка, позиция).
+## active_equip_id убран: тачка живёт в сцене уровня постоянно, не спавнится.
 ## PROGRESS-данные (gold, xp, уровни экипировки) НЕ трогает.
 func reset_session() -> void:
 	health               = 100
 	lives_count          = 3
 	points               = 0
-	point_wheelbarrow          = 0
-	active_equip_id      = ""
+	point_wheelbarrow    = 0
+	active_equip_id      = ""   # зарезервировано для будущих спавнуемых предметов (bucket и др.)
 	player_position_x    = 0.0
 	player_position_y    = 0.0
 	player_facing_left   = false

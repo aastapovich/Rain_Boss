@@ -16,31 +16,35 @@
 [ext_resource type="Resource" uid="uid://bf5ueghutwj1b" path="res://Elements/Cloud/CloudConfig/configs/cloud_simple.tres" id="14_simple"]
 [ext_resource type="Script" uid="uid://c41lg48ys4sd2" path="res://Elements/Enemy/stop_point.gd" id="15_sp"]
 [ext_resource type="Script" uid="uid://dud2pkt70o4ui" path="res://addons/scatter2d/src/modifiers/mod_create_inside_random.gd" id="15_xrji8"]
-[ext_resource type="Texture2D" uid="uid://bqjf27m2j8wbl" path="res://Assets/Img/enemy/Sign/Sign1.png" id="16_sign"]
+[ext_resource type="Texture2D" uid="uid://bqjf27m2j8wbl" path="res://Assets/Img/Enemy/Sign/Sign1.png" id="16_sign"]
 [ext_resource type="PackedScene" uid="uid://6d6dy6oq623w" path="res://Elements/Enemy/StopPointPlayer.tscn" id="17_drain"]
 [ext_resource type="PackedScene" uid="uid://v7kkbdvf07yt" path="res://Elements/Exit_plot/exit_plot.tscn" id="18_exit"]
 [ext_resource type="PackedScene" uid="uid://bilcoknko5iy8" path="res://Elements/Cloud/CloudLayer/cloud_layer.tscn" id="19_cloudlayer"]
 [ext_resource type="PackedScene" uid="uid://cgyhpays78lp" path="res://Props/interact_zone.tscn" id="21_jkbap"]
 [ext_resource type="Script" uid="uid://cauut5m2mih5o" path="res://Levels/level_unload.gd" id="22_unl"]
-[ext_resource type="PackedScene" uid="uid://b5157shtjvbyj" path="res://Elements/wheel.tscn" id="23_yv3th"]
+[ext_resource type="PackedScene" uid="uid://covxo1g1dswjp" path="res://Elements/Mashines/Wheel/wheel.tscn" id="23_yv3th"]
+[ext_resource type="PackedScene" uid="uid://btf6y2txubxu2" path="res://Elements/Items/barrel.tscn" id="24_m5qaj"]
+[ext_resource type="PackedScene" uid="uid://pd88kmpqfleh" path="res://ui/Inventory/InventoryBar.tscn" id="25_invbar"]
+[ext_resource type="PackedScene" uid="uid://djn7xim4c5trb" path="res://Elements/Items/shovel.tscn" id="26_shovel"]
+[ext_resource type="PackedScene" uid="uid://x01qis2tijdy" path="res://Elements/Items/bucket.tscn" id="27_bucket"]
 
-[sub_resource type="Resource" id="Resource_yv3th"]
+[sub_resource type="Resource" id="Resource_xrji8"]
 script = ExtResource("15_xrji8")
 amount = 30
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_m5qaj"]
+[sub_resource type="Resource" id="Resource_gl05s"]
 script = ExtResource("13_ui5nr")
-stack = Array[ExtResource("14_kem32")]([SubResource("Resource_yv3th")])
+stack = Array[ExtResource("14_kem32")]([SubResource("Resource_xrji8")])
 
-[sub_resource type="Resource" id="Resource_ui5nr"]
+[sub_resource type="Resource" id="Resource_clmwu"]
 script = ExtResource("15_xrji8")
 amount = 30
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_kem32"]
+[sub_resource type="Resource" id="Resource_5qegs"]
 script = ExtResource("13_ui5nr")
-stack = Array[ExtResource("14_kem32")]([SubResource("Resource_ui5nr")])
+stack = Array[ExtResource("14_kem32")]([SubResource("Resource_clmwu")])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_082j7"]
 size = Vector2(91.5, 60)
@@ -132,12 +136,15 @@ _data = {
 [node name="Level01Content" type="Node2D" unique_id=1422758880]
 
 [node name="Background" parent="." unique_id=1683030557 instance=ExtResource("1_bg")]
+z_index = -10
 
 [node name="Place" parent="." unique_id=319281876 instance=ExtResource("2_place")]
+z_index = -5
 
 [node name="Props" type="Node2D" parent="." unique_id=1634527286]
 
 [node name="Home" parent="Props" unique_id=1068315644 instance=ExtResource("4_home")]
+z_index = -5
 position = Vector2(421, 636)
 
 [node name="ShopZone" parent="Props" unique_id=1021312425 instance=ExtResource("5_qq6xg")]
@@ -152,13 +159,13 @@ position = Vector2(3784, 0)
 
 [node name="Scatter_Grass" parent="Props" unique_id=2008980721 instance=ExtResource("10_yv3th")]
 position = Vector2(6, -29)
-modifier_stack = SubResource("Resource_m5qaj")
+modifier_stack = SubResource("Resource_gl05s")
 
 [node name="Scatter_Rock" parent="Props" unique_id=658576194 instance=ExtResource("12_m5qaj")]
 z_index = 4
 position = Vector2(-97, -36)
 global_seed = 5
-modifier_stack = SubResource("Resource_kem32")
+modifier_stack = SubResource("Resource_5qegs")
 
 [node name="TransformZone_ToRain" parent="." unique_id=1713508004 instance=ExtResource("11_tz")]
 position = Vector2(441, 97)
@@ -219,11 +226,11 @@ script = ExtResource("22_unl")
 tip_angle = 0.75
 
 [node name="drain" parent="Unload" unique_id=2094378631 instance=ExtResource("17_drain")]
-position = Vector2(1055, 611)
+position = Vector2(3735, 611)
 collision_mask = 1
 
 [node name="Exit_plot" parent="." unique_id=1263592679 instance=ExtResource("18_exit")]
-position = Vector2(3870.0002, 664)
+position = Vector2(3881, 687)
 scale = Vector2(1.155, 1.155)
 
 [node name="CloudLayer" parent="." unique_id=1035941379 instance=ExtResource("19_cloudlayer")]
@@ -234,7 +241,24 @@ popup_title = "OOO"
 popup_text = "RFR"
 
 [node name="Wheel" parent="." unique_id=1262444949 instance=ExtResource("23_yv3th")]
-position = Vector2(728, 640)
+position = Vector2(357, 641)
+scale = Vector2(1, 1)
+
+[node name="Barrel" parent="." unique_id=2102192176 instance=ExtResource("24_m5qaj")]
+z_index = -1
+position = Vector2(22, 621)
+
+[node name="Shovel" parent="." unique_id=1999100001 instance=ExtResource("26_shovel")]
+visible = false
+position = Vector2(450, 641)
+item_visible = false
+
+[node name="Bucket" parent="." unique_id=1999200001 instance=ExtResource("27_bucket")]
+visible = false
+position = Vector2(600, 641)
+item_visible = false
+
+[node name="InventoryBar" parent="." unique_id=1999000001 instance=ExtResource("25_invbar")]
 
 [connection signal="body_entered" from="attention" to="attention" method="_on_body_entered"]
 [connection signal="body_exited" from="attention" to="attention" method="_on_body_exited"]

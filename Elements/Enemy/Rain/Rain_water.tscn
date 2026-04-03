@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://youdqg4srp8f"]
 
 [ext_resource type="Script" uid="uid://xxi3hss8ki7n" path="res://Elements/Enemy/Rain/rain_water.gd" id="1_5cny1"]
-[ext_resource type="Texture2D" uid="uid://bxf8t0i63hb35" path="res://Assets/Img/Rain/RW_monohrom_mid/rain_water_mono_all.png" id="2_37msr"]
+[ext_resource type="Texture2D" uid="uid://bxf8t0i63hb35" path="res://Assets/Img/Environment/Rain/RW_monohrom_mid/rain_water_mono_all.png" id="2_37msr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1c3ck"]
 atlas = ExtResource("2_37msr")
@@ -68,7 +68,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dcgsv"]
-radius = 7.0
+radius = 5.0
 
 [node name="Rain_water" type="Area2D" unique_id=1100259963]
 top_level = true
@@ -77,13 +77,13 @@ script = ExtResource("1_5cny1")
 
 [node name="Rain_Imd" type="AnimatedSprite2D" parent="." unique_id=1573154370]
 self_modulate = Color(0, 0.82923776, 1.4408784, 1)
-position = Vector2(0, -17)
-scale = Vector2(0.0564516, 0.0564516)
+position = Vector2(0, -11)
+scale = Vector2(0.069767445, 0.069767445)
 sprite_frames = SubResource("SpriteFrames_dcgsv")
 frame_progress = 0.11087143
 
 [node name="CollisionRain" type="CollisionShape2D" parent="." unique_id=1399863774]
-position = Vector2(0, -8)
+position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_dcgsv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

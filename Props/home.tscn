@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3m3sfl1h1fgv"]
 
-[ext_resource type="Texture2D" uid="uid://c2tnnkj0b8nbr" path="res://Assets/Img/Background/Дом из бревен.png" id="1_b3hk7"]
+[ext_resource type="Texture2D" uid="uid://c2tnnkj0b8nbr" path="res://Assets/Img/Props/Дом из бревен.png" id="1_b3hk7"]
 [ext_resource type="Script" uid="uid://8vctdln13fbd" path="res://Props/home_area.gd" id="1_koijv"]
 [ext_resource type="Script" uid="uid://b2vmanrvu28tk" path="res://Elements/Enemy/Rain/drip_emitter.gd" id="3_b6mkb"]
 [ext_resource type="Texture2D" uid="uid://cerf1y5578nev" path="res://Assets/Img/Player/Shaddow.png" id="3_hgi6w"]

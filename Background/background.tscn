@@ -2,9 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://df2flwwn8koq5" path="res://Assets/Img/Background/Parallax/sky.png" id="1_oxn4t"]
 [ext_resource type="Texture2D" uid="uid://b7w71com0roke" path="res://Assets/Img/Background/Parallax/Montan.png" id="2_xf88r"]
-[ext_resource type="Texture2D" uid="uid://dgpuglkhdj00q" path="res://Assets/Img/Background/Pine/Pine.png" id="3_dydqa"]
-[ext_resource type="Texture2D" uid="uid://dnhmp5au7k64f" path="res://Assets/Img/Background/wood/Wood.png" id="5_xf88r"]
-[ext_resource type="Texture2D" uid="uid://k73ll33emunr" path="res://Assets/Img/Background/Rock/Rock_0.png" id="6_3oqcq"]
+[ext_resource type="Texture2D" uid="uid://dgpuglkhdj00q" path="res://Assets/Img/Props/Pine/Pine.png" id="3_dydqa"]
+[ext_resource type="Texture2D" uid="uid://dnhmp5au7k64f" path="res://Assets/Img/Props/Wood/Wood.png" id="5_xf88r"]
 [ext_resource type="Texture2D" uid="uid://cerf1y5578nev" path="res://Assets/Img/Player/Shaddow.png" id="6_5tk72"]
 [ext_resource type="Texture2D" uid="uid://dm1gumq6ftchf" path="res://Assets/Img/Background/Parallax/Tuman.png" id="8_kv8vn"]
 
@@ -63,6 +62,7 @@ region = Rect2(495.4947, 3.7291222, 210.80151, 151.05954)
 [node name="Background" type="Node2D" unique_id=1683030557]
 
 [node name="Фон" type="Parallax2D" parent="." unique_id=1869167765]
+z_index = -50
 scroll_scale = Vector2(0, 0)
 repeat_size = Vector2(1280, 0)
 
@@ -74,6 +74,7 @@ texture = ExtResource("1_oxn4t")
 centered = false
 
 [node name="Горы" type="Parallax2D" parent="." unique_id=1764639908]
+z_index = -45
 scroll_scale = Vector2(0.2, 0.2)
 repeat_size = Vector2(2560, 0)
 
@@ -85,6 +86,7 @@ centered = false
 offset = Vector2(0.1, 0)
 
 [node name="Сосны фон" type="Parallax2D" parent="." unique_id=1148995067]
+z_index = -40
 scroll_scale = Vector2(0.6, 0.6)
 repeat_size = Vector2(1280, 0)
 
@@ -127,6 +129,7 @@ texture = SubResource("AtlasTexture_3xmvy")
 offset = Vector2(0.7, 0)
 
 [node name="Tuman_1" type="Parallax2D" parent="." unique_id=1695992692]
+z_index = -35
 repeat_size = Vector2(1280, 0)
 
 [node name="Tuman" type="Sprite2D" parent="Tuman_1" unique_id=112964194]
@@ -137,6 +140,7 @@ texture = ExtResource("8_kv8vn")
 centered = false
 
 [node name="Сосны" type="Parallax2D" parent="." unique_id=1761217567]
+z_index = -30
 scroll_scale = Vector2(0.8, 0.8)
 scroll_offset = Vector2(0, -15)
 repeat_size = Vector2(2560, 0)
@@ -229,6 +233,7 @@ texture = SubResource("AtlasTexture_xf88r")
 offset = Vector2(0.7, 0)
 
 [node name="Tuman_2" type="Parallax2D" parent="." unique_id=1722966192]
+z_index = -25
 repeat_size = Vector2(1280, 0)
 
 [node name="Tuman" type="Sprite2D" parent="Tuman_2" unique_id=2122348575]
@@ -239,25 +244,14 @@ texture = ExtResource("8_kv8vn")
 centered = false
 
 [node name="Place" type="Parallax2D" parent="." unique_id=1247924276]
+z_index = 6
+scroll_offset = Vector2(-1, 0)
 repeat_size = Vector2(3000, 0)
 ignore_camera_scroll = true
 screen_offset = Vector2(500, 0)
 
 [node name="Pine2" type="Node2D" parent="Place" unique_id=830838447]
 z_index = 5
-
-[node name="Pine2_5" type="Sprite2D" parent="Place/Pine2" unique_id=1739305157]
-position = Vector2(157, 660)
-rotation = -0.21623081
-scale = Vector2(0.8734178, 0.87341774)
-texture = ExtResource("6_3oqcq")
-
-[node name="Shaddow" type="Sprite2D" parent="Place/Pine2/Pine2_5" unique_id=313292814]
-self_modulate = Color(1, 1, 1, 0.972549)
-position = Vector2(-17.87352, 54.685062)
-rotation = 0.21623082
-scale = Vector2(3.3274455, 0.35778984)
-texture = ExtResource("6_5tk72")
 
 [node name="Pine2_1" type="Sprite2D" parent="Place/Pine2" unique_id=584058517]
 self_modulate = Color(0.015686275, 0.64705884, 0, 0.89411765)

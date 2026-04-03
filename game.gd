@@ -13,14 +13,15 @@ var _shop_open: bool = false
 var _popup_open: bool = false
 
 const _MAIN_MENU_SCENE := preload("res://ui/main_menu/main_menu.tscn")
-const _PLAYER_SCENE    := preload("res://Elements/Player/Player_00/Player.tscn")
-const _PLAYER_SCRIPT   := preload("res://Elements/Player/Player_00/player_default.gd")
+const _PLAYER_SCENE    := preload("res://Player/Player.tscn")
+const _PLAYER_SCRIPT   := preload("res://Player/player_default.gd")
 var _main_menu_instance: CanvasLayer = null
 
 ## Ссылка на текущий инстанс сцены уровня (потомок LevelContent).
 var _level_instance: Node = null
 
 var player: CharacterBody2D = null
+## Ссылка на InventorySystem (для спавна bucket и будущих предметов).
 @onready var _inventory    = $Progression/InventorySystem
 @onready var _shop         = $CanvasLayer/Shop
 @onready var game_over_ui  = $CanvasLayer/GameOver
@@ -37,7 +38,25 @@ func _ready() -> void:
 	_show_main_menu()
 
 ## Показывает главное меню как подгружаемую сцену поверх Game.tscn.
+## Безопасно вызывать повторно (из victory/game_over) — чистит предыдущее состояние.
 func _show_main_menu() -> void:
+	# Убираем старый уровень
+	if _level_instance and is_instance_valid(_level_instance):
+		_level_instance.queue_free()
+		_level_instance = null
+	# Убираем старого игрока
+	if player and is_instance_valid(player):
+		player.queue_free()
+		player = null
+	# Сбрасываем UI-флаги
+	current_state = GameState.PLAYING
+	game_time = 0.0
+	difficulty_multiplier = 1.0
+	if victory_ui:
+		victory_ui.visible = false
+	if game_over_ui:
+		game_over_ui.visible = false
+
 	_main_menu_instance = _MAIN_MENU_SCENE.instantiate()
 	add_child(_main_menu_instance)
 	_main_menu_instance.continue_game.connect(_on_menu_continue)
@@ -74,15 +93,21 @@ func _spawn_player() -> void:
 
 ## Подключает игровые события (вызывается единожды при старте игры из меню).
 func _setup_game_events() -> void:
-	Events.lives_count_changed.connect(_on_lives_changed)
-	Events.shop_opened.connect(_on_shop_opened)
+	if not Events.lives_count_changed.is_connected(_on_lives_changed):
+		Events.lives_count_changed.connect(_on_lives_changed)
+	if not Events.shop_opened.is_connected(_on_shop_opened):
+		Events.shop_opened.connect(_on_shop_opened)
 	Events.skill_level_changed.connect(func(_lvl): SaveManager.save_progress(Globals))
 	Events.interact_triggered.connect(func(_t, _ti, _d): _popup_open = true)
 	Events.interact_closed.connect(func(): _popup_open = false)
-	_shop.closed.connect(_on_shop_closed)
-	pause_menu.resume_pressed.connect(_on_pause_resume)
-	pause_menu.menu_pressed.connect(_on_pause_menu)
-	pause_menu.quit_pressed.connect(_on_pause_quit)
+	if not _shop.closed.is_connected(_on_shop_closed):
+		_shop.closed.connect(_on_shop_closed)
+	if not pause_menu.resume_pressed.is_connected(_on_pause_resume):
+		pause_menu.resume_pressed.connect(_on_pause_resume)
+	if not pause_menu.menu_pressed.is_connected(_on_pause_menu):
+		pause_menu.menu_pressed.connect(_on_pause_menu)
+	if not pause_menu.quit_pressed.is_connected(_on_pause_quit):
+		pause_menu.quit_pressed.connect(_on_pause_quit)
 
 ## Каждый кадр: увеличивает таймер игры, обновляет сложность и проверяет ESC.
 func _process(delta: float):
@@ -111,16 +136,10 @@ func _on_shop_opened() -> void:
 	get_tree().paused = true
 	_shop.open(_CTX_CLASS.from_globals())
 
-## Применяет результат магазина: ctx → Globals, затем обновляет экипировку.
+## Применяет результат магазина: ctx → Globals.
+## Спавн/деспавн тачки здесь не нужен — она живёт в сцене уровня постоянно.
 func _on_shop_closed(ctx) -> void:
-	var prev_equip := Globals.active_equip_id
 	ctx.apply_to_globals()
-	var new_equip := Globals.active_equip_id
-	if new_equip != prev_equip:
-		_inventory.despawn_equip(prev_equip)
-		if new_equip != "":
-			Globals.active_equip_id = new_equip
-			_inventory.spawn_active(player, player.get_parent())
 	Events.shop_closed.emit()
 	get_tree().paused = false
 	_shop_open = false
@@ -160,8 +179,9 @@ func _load_level(level_id: int, show_intro: bool = true) -> void:
 
 	# ── Сброс предыдущего уровня ─────────────────────────────────────────────
 	if not is_resume:
-		# Деспавним экипировку ДО сброса Globals (чтобы знать что удалять)
-		_inventory.reset_for_level(Globals.active_equip_id)
+		# Тачка живёт в сцене — деспавнить не нужно.
+		# Для будущих спавнуемых предметов (bucket и др.) оставить:
+		# _inventory.reset_for_level(Globals.active_equip_id)
 		# Сбрасываем только сессионные данные (здоровье, тачка, позиция и т.д.)
 		Globals.reset_session()
 
@@ -192,13 +212,12 @@ func _load_level(level_id: int, show_intro: bool = true) -> void:
 		Events.exit_point_changed.emit(0, data.max_exit_point)
 
 	# ── Экипировка ───────────────────────────────────────────────────────────
-	if is_resume and Globals.active_equip_id != "" and player:
-		print("[RESUME] spawn_active equip='%s'  player.gpos=%s" % [Globals.active_equip_id, player.global_position])
-		_inventory.spawn_active(player, player.get_parent() as Node2D)
+	# Тачка живёт в сцене уровня постоянно — автоспавн при resume не нужен.
+	# Для будущих спавнуемых предметов добавить вызов _inventory.spawn_active() здесь.
 
 	# ── Интро уровня ─────────────────────────────────────────────────────────
 	if show_intro and not is_resume and data.level_description != "" and level_intro:
-		level_intro.show_intro(data.level_name, data.level_description)
+		level_intro.show_intro(data.level_name, data.level_description, data.intro_image)
 
 	_connect_level_signals()
 ## Переподключает межсценарные сигналы после загрузки нового level-pack.

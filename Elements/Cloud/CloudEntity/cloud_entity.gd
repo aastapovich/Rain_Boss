@@ -28,7 +28,7 @@ var direction: float = 1.0
 # Шейдерный материал — создаётся в _ready()
 var _shader_mat: ShaderMaterial = null
 
-const _SHADER = preload("res://Elements/Cloud/Shaders/cloud_transition.gdshader")
+const _SHADER = preload("res://Assets/Shaders/cloud_transition.gdshader")
 const _SPAWN_DURATION: float = 0.6
 const _TRANSFORM_DURATION: float = 4.0
 

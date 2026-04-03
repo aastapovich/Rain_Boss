@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://btf6y2txubxu2"]
+
+[ext_resource type="Texture2D" uid="uid://ddkd747bix6rv" path="res://Assets/Img/Items/Barrel.png" id="1_n8un1"]
+[ext_resource type="Script" uid="uid://uns7djq41rli" path="res://Elements/Items/Carriable.gd" id="2_barl"]
+[ext_resource type="Shader" uid="uid://cwpdv6b61h15x" path="res://Assets/Shaders/outline.gdshader" id="3_shdr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_barrel"]
+shader = ExtResource("3_shdr")
+shader_parameter/outline_color = Color(1, 0.95, 0.2, 1)
+shader_parameter/outline_size = 3.0
+shader_parameter/show_outline = false
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvtmh"]
+radius = 40.0
+height = 82.0
+
+[node name="Barrel" type="Node2D" unique_id=2102192176]
+script = ExtResource("2_barl")
+item_label = "Бочка"
+hand_offset = Vector2(30, -40)
+flip_x_compensation = -20.0
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=512028764]
+target_position = Vector2(0, 41)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=11853182]
+material = SubResource("ShaderMaterial_barrel")
+scale = Vector2(0.4137931, 0.41379306)
+texture = ExtResource("1_n8un1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=782752531]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1611448469]
+shape = SubResource("CapsuleShape2D_lvtmh")

@@ -1,0 +1,208 @@
+[gd_scene format=3 uid="uid://covxo1g1dswjp"]
+
+[ext_resource type="Texture2D" uid="uid://db6v7sk436p3c" path="res://Assets/Img/Environment/Shaddow.png" id="1_v0jti"]
+[ext_resource type="Texture2D" uid="uid://16xopvbxxr06" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0016.png" id="1_yiqx4"]
+[ext_resource type="Texture2D" uid="uid://c6nskp8vgsbgf" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0017.png" id="2_i0eqy"]
+[ext_resource type="Texture2D" uid="uid://dt0cnimbxluwd" path="res://Assets/Img/Mashines/Wheel/2_0000.png" id="2_t7rfc"]
+[ext_resource type="Texture2D" uid="uid://bbup6qdi5osgi" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0018.png" id="3_dpg64"]
+[ext_resource type="Texture2D" uid="uid://d4fdhb5iiydle" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0019.png" id="4_1k23q"]
+[ext_resource type="Texture2D" uid="uid://dqclvc63g18o8" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0020.png" id="5_oko7w"]
+[ext_resource type="Texture2D" uid="uid://oshp17fvl6vo" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0021.png" id="6_bsy08"]
+[ext_resource type="Texture2D" uid="uid://cpp33wn1472ha" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0022.png" id="7_aynbh"]
+[ext_resource type="Texture2D" uid="uid://cnsagtoc0q22o" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0023.png" id="8_olatb"]
+[ext_resource type="Texture2D" uid="uid://diwhiuu87ycli" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0024.png" id="9_go434"]
+[ext_resource type="Texture2D" uid="uid://bynfex6aej87q" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0025.png" id="10_yuerd"]
+[ext_resource type="Texture2D" uid="uid://bn5fpmmhulmr7" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0004.png" id="11_divu0"]
+[ext_resource type="Texture2D" uid="uid://co608pi2kv2rr" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0005.png" id="12_muq6h"]
+[ext_resource type="Texture2D" uid="uid://bun71s67f67q4" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0006.png" id="13_gj34f"]
+[ext_resource type="Texture2D" uid="uid://c7ece7wq0kejb" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0007.png" id="14_6phvh"]
+[ext_resource type="Texture2D" uid="uid://cqhss8pdvc4d3" path="res://Assets/Img/Mashines/Wheel/Whater_well/1_0008.png" id="15_m1ipu"]
+[ext_resource type="Texture2D" uid="uid://bq3xojn2443p6" path="res://Assets/Img/Mashines/Wheel/Shin_2x2.png" id="16_fll61"]
+[ext_resource type="Script" uid="uid://biotsljt25m7f" path="res://Elements/Mashines/Wheel/Wheel.gd" id="17_wheelscript"]
+[ext_resource type="Shader" uid="uid://cwpdv6b61h15x" path="res://Assets/Shaders/outline.gdshader" id="18_outline"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wheel"]
+shader = ExtResource("18_outline")
+shader_parameter/outline_color = Color(1, 0.95, 0.2, 1)
+shader_parameter/outline_size = 5.0
+shader_parameter/show_outline = false
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_osw8u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_divu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_muq6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gj34f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6phvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_m1ipu")
+}],
+"loop": false,
+"name": &"Whell_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_divu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_muq6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gj34f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6phvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_m1ipu")
+}],
+"loop": false,
+"name": &"Whell_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yiqx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i0eqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dpg64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1k23q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oko7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bsy08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aynbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_olatb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_go434")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yuerd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_go434")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_olatb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aynbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bsy08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oko7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1k23q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dpg64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i0eqy")
+}],
+"loop": true,
+"name": &"wheel_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg3ux"]
+atlas = ExtResource("16_fll61")
+region = Rect2(329.45346, 1.408782, 164.03128, 163.80066)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t2xwx"]
+radius = 16.03122
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t7rfc"]
+radius = 9.659088
+
+[node name="Wheel" type="CharacterBody2D" unique_id=1262444949]
+position = Vector2(-3, 0)
+scale = Vector2(1.7599998, 1.7599998)
+collision_mask = 3
+script = ExtResource("17_wheelscript")
+flip_x_compensation = -22.0
+metadata/_edit_vertical_guides_ = [-56.0]
+metadata/_edit_horizontal_guides_ = [-10.0]
+
+[node name="Visual" type="Node2D" parent="." unique_id=1373192696]
+
+[node name="Shaddow_whell" type="Sprite2D" parent="Visual" unique_id=1774154628]
+self_modulate = Color(0.93333334, 0.93333334, 0.93333334, 0.49019608)
+position = Vector2(-28, 13)
+scale = Vector2(2.4999998, 0.28846154)
+texture = ExtResource("1_v0jti")
+
+[node name="Whell_tank" type="Sprite2D" parent="Visual" unique_id=1480972204]
+self_modulate = Color(1, 1, 1, 0.7921569)
+light_mask = 0
+material = SubResource("ShaderMaterial_wheel")
+position = Vector2(-31.81819, -5.681819)
+scale = Vector2(0.17206962, 0.17206962)
+texture = ExtResource("2_t7rfc")
+offset = Vector2(-0.69473267, -6.0231705)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visual" unique_id=662534936]
+modulate = Color(0.4392157, 0.94509804, 1, 0.30588236)
+position = Vector2(-18.750002, 6.25)
+scale = Vector2(0.29151922, 0.27097133)
+sprite_frames = SubResource("SpriteFrames_osw8u")
+animation = &"wheel_walk"
+autoplay = "wheel_walk"
+offset = Vector2(-1.2179413, -36.373764)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=711755837]
+polygon = PackedVector2Array(-57.954556, -19.886368, 22.159096, -19.886368, 0, 11.931821)
+
+[node name="Shin" type="RigidBody2D" parent="." unique_id=1731099680]
+position = Vector2(0.06227494, 0.28177643)
+collision_layer = 0
+collision_mask = 2
+mass = 2.0
+gravity_scale = 0.0
+
+[node name="shin" type="Sprite2D" parent="Shin" unique_id=1914004563]
+scale = Vector2(0.19729558, 0.19729574)
+texture = SubResource("AtlasTexture_yg3ux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shin" unique_id=767224524]
+shape = SubResource("CircleShape2D_t2xwx")
+
+[node name="Pin_Shin" type="PinJoint2D" parent="." unique_id=1187078104]
+position = Vector2(0.062274937, 0.28177643)
+node_a = NodePath("..")
+node_b = NodePath("../Shin")
+
+[node name="use_Player" type="Node2D" parent="." unique_id=369284169]
+position = Vector2(-85.79547, -18.181822)
+
+[node name="AttachArea" type="Area2D" parent="use_Player" unique_id=1335766145]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="use_Player/AttachArea" unique_id=1114009087]
+position = Vector2(9.059906e-06, -9.536743e-07)
+shape = SubResource("CircleShape2D_t7rfc")

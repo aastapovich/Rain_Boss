@@ -28,3 +28,7 @@ extends Resource
 
 ## Описание уровня для экрана вступления (пустая строка = не показывать).
 @export_multiline var level_description: String = ""
+
+## Полноформатный рисунок для экрана вступления.
+## Если не задан — фон остаётся тёмным (ColorRect).
+@export var intro_image: Texture2D

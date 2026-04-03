@@ -15,6 +15,7 @@ bg_color = Color(0.729412, 0.533333, 0.0862745, 1)
 
 [node name="GameOver" type="CanvasLayer" unique_id=76123652]
 process_mode = 2
+layer = 200
 script = ExtResource("1_xgqeb")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1433747048]

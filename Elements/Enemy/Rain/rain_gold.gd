@@ -34,7 +34,7 @@ func _add_default_hit_configs() -> void:
 	ground.do_puddle  = false
 	hit_configs.append(ground)
 
-	# Тачка → +10 воды + 1 золото через Globals (do_splash=false: wheelbarrow.gd.rain_wheelbarrow_add сам вызывает _play_splash)
+		# Тачка (Wheel) → +10 воды + 1 золото через Globals
 	var wheelbarrow := _HitCfg.new()
 	wheelbarrow.key_method    = "rain_wheelbarrow_add"
 	wheelbarrow.call_args     = [10, "gold"]

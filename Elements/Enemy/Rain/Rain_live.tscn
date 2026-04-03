@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://begjcs3yjtglv"]
 
 [ext_resource type="Script" uid="uid://clnjr072igpou" path="res://Elements/Enemy/Rain/rain_live.gd" id="1_trxhf"]
-[ext_resource type="Texture2D" uid="uid://bxf8t0i63hb35" path="res://Assets/Img/Rain/RW_monohrom_mid/rain_water_mono_all.png" id="2_c4lyu"]
+[ext_resource type="Texture2D" uid="uid://bxf8t0i63hb35" path="res://Assets/Img/Environment/Rain/RW_monohrom_mid/rain_water_mono_all.png" id="2_c4lyu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c4lyu"]
 atlas = ExtResource("2_c4lyu")
@@ -56,7 +56,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jvsij"]
-radius = 7.0
+radius = 5.0
 
 [node name="Rain_live" type="Area2D" unique_id=2118045213]
 top_level = true
@@ -66,14 +66,14 @@ script = ExtResource("1_trxhf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1136719280]
 self_modulate = Color(1, 0, 0, 1)
-position = Vector2(0, -16.999998)
-scale = Vector2(0.116279066, 0.11627909)
+position = Vector2(0, -10)
+scale = Vector2(0.069767445, 0.06976746)
 sprite_frames = SubResource("SpriteFrames_pycit")
 autoplay = "default"
 frame_progress = 0.4356248
 
 [node name="CollisionRain" type="CollisionShape2D" parent="." unique_id=354433304]
-position = Vector2(0, -7)
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_jvsij")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

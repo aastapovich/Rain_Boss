@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rwe3qxsok87s"
-path="res://.godot/imported/Ëжик0.png-f58ed28c8d555dc73b33caf569b1abb1.ctex"
+path="res://.godot/imported/Ëжик0.png-37e9a3df12b89c053a443ce993b33850.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Img/enemy/hedgehog/Ëжик0.png"
-dest_files=["res://.godot/imported/Ëжик0.png-f58ed28c8d555dc73b33caf569b1abb1.ctex"]
+source_file="res://Assets/Img/Enemy/hedgehog/Ëжик0.png"
+dest_files=["res://.godot/imported/Ëжик0.png-37e9a3df12b89c053a443ce993b33850.ctex"]
 
 [params]
 

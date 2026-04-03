@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b48imbj65yddn" path="res://Levels/level_01.tscn" id="1_3p5k4"]
 [ext_resource type="Script" uid="uid://be0ujbn0py4q4" path="res://Core/level_data.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bwewy6ycrpt8m" path="res://Assets/Img/Intro/Level_1_Intro.png" id="2_intro"]
 
 [resource]
 script = ExtResource("1_script")
@@ -9,6 +10,7 @@ level_name = "Лес — Тачка с водой"
 level_scene = ExtResource("1_3p5k4")
 player_start_position = Vector2(250, 652)
 max_exit_point = 1
+intro_image = ExtResource("2_intro")
 level_description = "Добро пожаловать в [b]Rain Boss[/b]!
 
 Твоя задача — ходить по лесу и собирать дождевую воду. Наполни тачку и выгрузи воду в канал, восстанови-переправу.

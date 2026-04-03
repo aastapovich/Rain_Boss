@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dvm3xe6bk4o3t"]
 
 [ext_resource type="Script" uid="uid://b8dwxpl85fynh" path="res://Elements/Enemy/hedgehog.gd" id="1_hedgehog"]
-[ext_resource type="Texture2D" uid="uid://rwe3qxsok87s" path="res://Assets/Img/enemy/hedgehog/Ëжик0.png" id="2_i4v5g"]
-[ext_resource type="Texture2D" uid="uid://denu2nahaceh4" path="res://Assets/Img/enemy/hedgehog/Ëжик1.png" id="3_78qgc"]
+[ext_resource type="Texture2D" uid="uid://rwe3qxsok87s" path="res://Assets/Img/Enemy/hedgehog/Ëжик0.png" id="2_i4v5g"]
+[ext_resource type="Texture2D" uid="uid://denu2nahaceh4" path="res://Assets/Img/Enemy/hedgehog/Ëжик1.png" id="3_78qgc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o7fdp"]
 animations = [{
